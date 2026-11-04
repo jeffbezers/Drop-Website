@@ -13,28 +13,125 @@ const FORM_ENDPOINT = "";
 (() => {
   const gauge = document.querySelector(".gauge");
   const readout = gauge?.querySelector("[data-depth]");
-  const bands = [...document.querySelectorAll("[data-depth-value]")];
+  const rail = gauge?.querySelector("[data-rail]");
+  const stopsList = gauge?.querySelector("[data-stops]");
+  const menu = gauge?.querySelector("[data-menu]");
+  const menuBtn = gauge?.querySelector(".gauge__readout");
+  // Every depth band with an id is a place you can jump to.
+  const bands = [...document.querySelectorAll("main [data-depth-value][id]")];
   if (!gauge || !readout || !bands.length) return;
 
-  let ticking = false;
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const maxScroll = () => Math.max(0, document.documentElement.scrollHeight - innerHeight);
+  const nameOf = (band) => document.getElementById(band.getAttribute("aria-labelledby"))?.textContent.trim() || "";
+  const go = (y, smooth = true) =>
+    scrollTo({ top: Math.min(maxScroll(), Math.max(0, y)), behavior: smooth && !reduceMotion ? "smooth" : "instant" });
+
+  // Build the stops: one link per band, on the rail (desktop) and in the menu (phone).
+  const railLinks = [], menuLinks = [];
+  for (const band of bands) {
+    const depth = band.dataset.depthValue, name = nameOf(band);
+    const li = document.createElement("li");
+    li.className = "gauge__stop";
+    li.innerHTML = `<a href="#${band.id}"><span class="gauge__name"></span>${depth}</a>`;
+    li.querySelector(".gauge__name").textContent = name;
+    li.querySelector("a").setAttribute("aria-label", `${depth} metres: ${name}`);
+    stopsList.append(li);
+    railLinks.push(li);
+
+    const mi = document.createElement("li");
+    mi.innerHTML = `<a href="#${band.id}"><b>${depth} m</b><span></span></a>`;
+    mi.querySelector("span").textContent = name;
+    menu.append(mi);
+    menuLinks.push(mi.querySelector("a"));
+  }
+
+  // Place each stop where the page sits when that band reaches the top of the screen.
+  const layoutStops = () => {
+    const max = maxScroll();
+    bands.forEach((band, i) => {
+      const at = max ? Math.min(1, band.offsetTop / max) : 0;
+      railLinks[i].style.setProperty("--at", at.toFixed(4));
+    });
+  };
+
+  let currentIndex = 0, ticking = false;
   const update = () => {
     ticking = false;
-    const max = document.documentElement.scrollHeight - innerHeight;
+    const max = maxScroll();
     const p = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
     gauge.style.setProperty("--p", p.toFixed(4));
 
     // Current band = last band whose top has passed 40% of the viewport.
     const line = innerHeight * 0.4;
-    let current = bands[0];
-    for (const b of bands) if (b.getBoundingClientRect().top <= line) current = b;
-    const depth = current.dataset.depthValue;
+    let idx = 0;
+    bands.forEach((b, i) => { if (b.getBoundingClientRect().top <= line) idx = i; });
+    if (scrollY >= max - 2) idx = bands.length - 1;
+    currentIndex = idx;
+    const depth = bands[idx].dataset.depthValue;
     if (readout.textContent !== depth) readout.textContent = depth;
     gauge.classList.toggle("is-deep", parseFloat(depth) >= 2);
+    rail.setAttribute("aria-valuenow", depth);
+    rail.setAttribute("aria-valuetext", `${depth} metres: ${nameOf(bands[idx])}`);
+    [...railLinks.map((li) => li.querySelector("a")), ...menuLinks].forEach((a) =>
+      a.setAttribute("aria-current", a.getAttribute("href") === `#${bands[idx].id}` ? "true" : "false"));
   };
   const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
   addEventListener("scroll", onScroll, { passive: true });
-  addEventListener("resize", onScroll);
+  addEventListener("resize", () => { layoutStops(); onScroll(); });
+  new ResizeObserver(() => { layoutStops(); onScroll(); }).observe(document.body);
+  layoutStops();
   update();
+
+  // Drag the marker (or press anywhere on the rail) to move through the page.
+  const fracAt = (clientY) => {
+    const r = rail.getBoundingClientRect();
+    return Math.min(1, Math.max(0, (clientY - r.top) / r.height));
+  };
+  let dragging = false, moved = false;
+  rail.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0) return;
+    dragging = true; moved = false;
+    rail.setPointerCapture(e.pointerId);
+    gauge.classList.add("is-dragging");
+    e.preventDefault();
+  });
+  rail.addEventListener("pointermove", (e) => {
+    if (!dragging) return;
+    moved = true;
+    go(fracAt(e.clientY) * maxScroll(), false);
+  });
+  const endDrag = (e) => {
+    if (!dragging) return;
+    dragging = false;
+    gauge.classList.remove("is-dragging");
+    if (!moved) go(fracAt(e.clientY) * maxScroll()); // a plain click glides there
+  };
+  rail.addEventListener("pointerup", endDrag);
+  rail.addEventListener("pointercancel", endDrag);
+
+  // Keyboard: arrows step between depths, Home/End jump to the surface or the floor.
+  rail.addEventListener("keydown", (e) => {
+    const to = { ArrowDown: currentIndex + 1, ArrowRight: currentIndex + 1, ArrowUp: currentIndex - 1, ArrowLeft: currentIndex - 1, Home: 0, End: bands.length - 1 }[e.key];
+    if (to === undefined) return;
+    e.preventDefault();
+    const band = bands[Math.min(bands.length - 1, Math.max(0, to))];
+    go(band.offsetTop);
+  });
+
+  // Phone menu
+  const closeMenu = () => { menu.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); };
+  const desktop = matchMedia("(min-width: 1180px)");
+  menuBtn.addEventListener("click", () => {
+    if (desktop.matches) return; // the rail does this job on wide screens
+    const open = menu.hidden;
+    menu.hidden = !open;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    if (open) (menu.querySelector('[aria-current="true"]') || menuLinks[0]).focus();
+  });
+  menu.addEventListener("click", (e) => { if (e.target.closest("a")) closeMenu(); });
+  document.addEventListener("click", (e) => { if (!menu.hidden && !gauge.contains(e.target)) closeMenu(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { closeMenu(); menuBtn.focus(); } });
 })();
 
 /* ---------------------------------------------------------------- forms */
