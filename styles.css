@@ -238,7 +238,7 @@ select.field {
 }
 .hero__copy { max-width: 40rem; }
 .hero__title {
-  font: 900 clamp(2.9rem, 1.6rem + 6vw, 6rem)/.96 var(--display);
+  font: 900 clamp(2.9rem, 1.6rem + 6vw, 6rem)/1.04 var(--display);
   font-stretch: 112%;
   letter-spacing: -.035em;
   color: var(--ink);
@@ -545,12 +545,22 @@ select.field {
 }
 
 /* Benefits strip (1.5 m) and closing waitlist (3.0 m) */
-.perks__title { margin-top: calc(var(--tile) * 1.5); font: 800 1.5rem/1.1 var(--display); font-stretch: 96%; }
-.perks { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 4px; max-width: 64rem; }
+.perks__title { margin-top: calc(var(--tile) * 1.5); font: 850 clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem)/1 var(--display); font-stretch: 104%; letter-spacing: -.02em; }
+.perks { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 2px; max-width: calc(var(--tile) * 16); background: var(--grout); border: 2px solid var(--grout); border-radius: 2px; }
 @media (min-width: 640px) { .perks { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1040px) { .perks { grid-template-columns: repeat(4, 1fr); } }
-.perk { display: grid; gap: 6px; padding: 20px; background: var(--grout); border-radius: 2px; }
+.perk { display: grid; align-content: start; gap: 6px; padding: 20px; background: #e9f7f5; }
 .perk strong { font: 800 1.125rem/1.15 var(--display); font-stretch: 96%; }
 .perk span { color: var(--ink-soft); font-size: .9375rem; }
 .signup--close { max-width: 40rem; margin-top: calc(var(--tile) * 1.25); }
 @media (min-width: 1180px) { .signup--close { margin-left: 0; } }
+
+/* Deep end: copy sits on large-format solid slabs so grout never crosses text */
+.depth--4 .section__inner, .depth--5 .section__inner, .depth--6 .section__inner, .signup--close {
+  background: var(--glaze);
+  outline: 2px solid var(--line);
+  padding: clamp(20px, 3vw, 36px);
+}
+.depth--6 .section__inner--split { max-width: 72rem; }
+.signup--close { --glaze: var(--d6); }
+.footer { background-image: none; }
