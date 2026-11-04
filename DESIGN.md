@@ -275,7 +275,9 @@ Tactile and confident, like a glazed tile with a lip.
 Brand left (lemon drop mark with ink stroke, wide wordmark), links and a small primary button right. Links are Hanken 600 with underline on hover; below 900px the links hide and only the button stays.
 
 ### Depth Gauge (signature)
-Fixed to the viewport. On mobile, a grout readout chip at bottom-right reading the current depth ("1.5 m") in condensed Anybody with tabular numerals. From 1180px, a 4px vertical rail with 0.0 / 1.5 / 3.0 ticks and a lemon drop marker that travels with scroll; rail and ticks switch to foam once past 2.0 m.
+Fixed to the viewport, and it's a navigation control, not just a readout. On mobile, a grout readout chip at bottom-right reads the current depth ("1.5 m") in condensed Anybody with tabular numerals. Tapping it opens a grout jump menu listing every band's depth and title, with the current band in lemon.
+
+From 1180px, the gauge is a vertical rail (48vh) with a 28px invisible hit area around a 4px line (6px on hover or drag). A lemon drop marker travels with scroll, and you can drag the marker or press anywhere on the rail to scroll there. Every band with an id gets a depth link on the rail, placed where the page sits when that band reaches the top. Hovering or focusing a link slides out a grout plaque with the section name, and the current depth fills lemon. Keyboard: the rail is a slider, arrows step between depths and Home/End jump to the surface or the floor. The rail and links switch to foam once past 2.0 m. New bands appear on the gauge automatically if they have an id and `data-depth-value`.
 
 ### Depth Plaque (signature)
 A white tile set into the wall at each band's top left, carrying the band's depth in Marker type with a smaller "m".
