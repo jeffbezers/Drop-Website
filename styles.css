@@ -564,3 +564,5 @@ select.field {
 .depth--6 .section__inner--split { max-width: 72rem; }
 .signup--close { --glaze: var(--d6); }
 .footer { background-image: none; }
+@media (min-width: 1180px) { .section { padding-right: calc(var(--tile) * 2.5); } }
+.depth--6 .beta { background: none; border: 0; padding: 0; }
