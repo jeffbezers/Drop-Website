@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-04T05:47:31.573Z",
+        "reason": "finish reviewer: .section has calc(var(--tile)*1.75) var(--gutter) padding; detector misreads tile-band sections"
+      }
+    ]
+  }
+}

@@ -33,7 +33,7 @@
   --foam-soft: #d6efeb;    /* secondary text on deep glaze */
   --grout: #f6f2ea;        /* warm grout, white tile slabs */
   --grout-line: rgba(246, 242, 234, .62);
-  --grout-line-deep: rgba(239, 250, 248, .1);
+  --grout-line-deep: rgba(246, 242, 234, .36);
 
   --lemon: #f6c93c;        /* shampoo bar */
   --lemon-hi: #ffe27a;
@@ -97,7 +97,7 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
 .depth--4, .depth--5, .depth--6 {
   --line: var(--grout-line-deep);
   background-image:
-    linear-gradient(135deg, rgba(255,255,255,.06) 0, rgba(255,255,255,0) 38%),
+    linear-gradient(135deg, rgba(255,255,255,.12) 0, rgba(255,255,255,0) 38%),
     linear-gradient(to right, var(--line) 2px, transparent 2px),
     linear-gradient(to bottom, var(--line) 2px, transparent 2px);
   color: var(--foam);
@@ -118,16 +118,19 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
   height: calc(var(--tile) - 2px);
   align-items: baseline;
   justify-content: center;
-  padding-top: 14px;
+  padding-top: 9px;
   background: var(--grout);
   color: var(--ink);
-  font: 800 1.5rem/1 var(--display);
-  font-stretch: 62%;
+  font: 850 2.25rem/1 var(--display);
+  font-stretch: 58%;
   letter-spacing: .01em;
   box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 2px 6px rgba(0, 0, 0, .18);
 }
 .plaque small { font-size: .62em; margin-left: .12em; font-weight: 700; }
-@media (min-width: 1180px) { .plaque { display: flex; } }
+.plaque { display: flex; top: calc(var(--tile) * .5); left: var(--gutter); }
+@media (min-width: 1180px) {
+  .plaque { top: calc(var(--tile) * 2 - 1px); left: calc(var(--tile) - 1px); }
+}
 
 /* --------------------------------------------------------------------------
    Nav
@@ -235,7 +238,7 @@ select.field {
 }
 .hero__copy { max-width: 40rem; }
 .hero__title {
-  font: 900 clamp(2.9rem, 1.6rem + 6vw, 6rem)/.9 var(--display);
+  font: 900 clamp(2.9rem, 1.6rem + 6vw, 6rem)/.96 var(--display);
   font-stretch: 112%;
   letter-spacing: -.035em;
   color: var(--ink);
@@ -287,7 +290,7 @@ select.field {
 /* --------------------------------------------------------------------------
    Shared section frame
    -------------------------------------------------------------------------- */
-.section { padding: calc(var(--tile) * 1.75) var(--gutter); }
+.section { padding: calc(var(--tile) * 2.25) var(--gutter) calc(var(--tile) * 1.75); }
 @media (min-width: 900px) { .section { padding-block: calc(var(--tile) * 2.5); } }
 @media (min-width: 1180px) { .section { padding-left: calc(var(--tile) * 4); } }
 .section__inner { max-width: 72rem; }
@@ -410,7 +413,7 @@ select.field {
 /* --------------------------------------------------------------------------
    2.5 m — Quiz
    -------------------------------------------------------------------------- */
-.quiz { margin-top: 36px; max-width: 52rem; }
+.quiz { margin-top: 36px; max-width: calc(var(--tile) * 14); }
 .quiz__q { border: 0; margin: 0; padding: 0; min-width: 0; }
 .quiz__q legend { padding: 0; font: 800 clamp(1.375rem, 1.2rem + .8vw, 1.75rem)/1.15 var(--display); font-stretch: 96%; margin-bottom: 18px; }
 .quiz__opts { display: grid; gap: 8px; }
@@ -418,15 +421,15 @@ select.field {
 .opt { position: relative; display: block; cursor: pointer; }
 .opt input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
 .opt span {
-  display: flex; align-items: center; min-height: 64px;
+  display: flex; align-items: center; min-height: calc(var(--tile) + 8px);
   padding: 14px 20px;
-  background: rgba(239, 250, 248, .08);
-  border: 2px solid rgba(239, 250, 248, .28);
+  background: #0d4a4e;
+  border: 2px solid rgba(246, 242, 234, .5);
   border-radius: 2px;
   font-weight: 600;
   transition: background-color .2s, border-color .2s, transform .25s var(--ease-out);
 }
-.opt:hover span { background: rgba(239, 250, 248, .16); border-color: rgba(239, 250, 248, .55); }
+.opt:hover span { background: #0a3f42; border-color: var(--grout); }
 .opt input:focus-visible + span { outline: 3px solid var(--lemon); outline-offset: 3px; }
 .opt input:checked + span { background: var(--lemon); border-color: var(--lemon); color: var(--ink); }
 .quiz__progress { display: flex; gap: 4px; margin-top: 28px; }
@@ -446,8 +449,8 @@ select.field {
    -------------------------------------------------------------------------- */
 .beta {
   padding: 28px;
-  background: rgba(239, 250, 248, .06);
-  border: 2px solid rgba(239, 250, 248, .16);
+  background: #08363a;
+  border: 2px solid rgba(246, 242, 234, .5);
   border-radius: 2px;
 }
 .beta__grid { display: grid; gap: 16px; }
@@ -526,7 +529,7 @@ select.field {
   .gauge__tick {
     position: absolute; right: 14px; top: calc(var(--at) * 100%);
     transform: translateY(-50%);
-    font: 700 .75rem/1 var(--display); font-stretch: 62%;
+    font: 750 .9375rem/1 var(--display); font-stretch: 62%;
     color: var(--ink);
     font-variant-numeric: tabular-nums;
     transition: color .4s;
@@ -540,3 +543,14 @@ select.field {
   .gauge.is-deep .gauge__rail { background: rgba(239, 250, 248, .25); }
   .gauge.is-deep .gauge__tick { color: var(--foam); }
 }
+
+/* Benefits strip (1.5 m) and closing waitlist (3.0 m) */
+.perks__title { margin-top: calc(var(--tile) * 1.5); font: 800 1.5rem/1.1 var(--display); font-stretch: 96%; }
+.perks { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 4px; max-width: 64rem; }
+@media (min-width: 640px) { .perks { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1040px) { .perks { grid-template-columns: repeat(4, 1fr); } }
+.perk { display: grid; gap: 6px; padding: 20px; background: var(--grout); border-radius: 2px; }
+.perk strong { font: 800 1.125rem/1.15 var(--display); font-stretch: 96%; }
+.perk span { color: var(--ink-soft); font-size: .9375rem; }
+.signup--close { max-width: 40rem; margin-top: calc(var(--tile) * 1.25); }
+@media (min-width: 1180px) { .signup--close { margin-left: 0; } }

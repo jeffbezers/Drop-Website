@@ -150,7 +150,7 @@ for (const form of document.querySelectorAll("[data-form]")) {
       const [title, body] = verdicts[quizAnswers.priority] || verdicts.results;
       result.querySelector("[data-verdict]").textContent = title;
       const curlNote = ["curly", "coily"].includes(quizAnswers.hair)
-        ? " Our launch bars are made for normal hair, and a curly hair bar is on the list. Testers with your hair type help us build it."
+        ? " Our launch bars are made for normal hair. Testers with your hair type help decide what we make next."
         : "";
       result.querySelector("[data-verdict-body]").textContent = body + curlNote;
       if (hairSelect && quizAnswers.hair) hairSelect.value = quizAnswers.hair;
