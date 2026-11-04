@@ -1,0 +1,583 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T05:52:42+00:00",
+  "title": "Design System: Drop",
+  "extensions": {
+    "colorMeta": {
+      "glaze-0": {
+        "role": "neutral",
+        "displayName": "Surface Aqua",
+        "tonalRamp": [
+          "#0c4145",
+          "#145a5e",
+          "#1d6f73",
+          "#80c9c2",
+          "#9cd8d2",
+          "#b6e4df",
+          "#cdeeea",
+          "#effaf8"
+        ]
+      },
+      "glaze-1": {
+        "role": "neutral",
+        "displayName": "Shallow Aqua",
+        "tonalRamp": [
+          "#0c4145",
+          "#145a5e",
+          "#1d6f73",
+          "#80c9c2",
+          "#9cd8d2",
+          "#b6e4df",
+          "#cdeeea",
+          "#effaf8"
+        ]
+      },
+      "glaze-2": {
+        "role": "neutral",
+        "displayName": "Pool Aqua",
+        "tonalRamp": [
+          "#0c4145",
+          "#145a5e",
+          "#1d6f73",
+          "#80c9c2",
+          "#9cd8d2",
+          "#b6e4df",
+          "#cdeeea",
+          "#effaf8"
+        ]
+      },
+      "glaze-3": {
+        "role": "neutral",
+        "displayName": "Waist-Deep Aqua",
+        "tonalRamp": [
+          "#0c4145",
+          "#145a5e",
+          "#1d6f73",
+          "#80c9c2",
+          "#9cd8d2",
+          "#b6e4df",
+          "#cdeeea",
+          "#effaf8"
+        ]
+      },
+      "glaze-4": {
+        "role": "neutral",
+        "displayName": "Deep-End Teal",
+        "tonalRamp": [
+          "#0c4145",
+          "#145a5e",
+          "#1d6f73",
+          "#80c9c2",
+          "#9cd8d2",
+          "#b6e4df",
+          "#cdeeea",
+          "#effaf8"
+        ]
+      },
+      "glaze-5": {
+        "role": "neutral",
+        "displayName": "Lower Teal",
+        "tonalRamp": [
+          "#0c4145",
+          "#145a5e",
+          "#1d6f73",
+          "#80c9c2",
+          "#9cd8d2",
+          "#b6e4df",
+          "#cdeeea",
+          "#effaf8"
+        ]
+      },
+      "glaze-6": {
+        "role": "neutral",
+        "displayName": "Pool-Floor Teal",
+        "tonalRamp": [
+          "#0c4145",
+          "#145a5e",
+          "#1d6f73",
+          "#80c9c2",
+          "#9cd8d2",
+          "#b6e4df",
+          "#cdeeea",
+          "#effaf8"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Deep-Teal Ink",
+        "canonical": "oklch(29.2% 0.043 204.9)",
+        "tonalRamp": [
+          "#040d0e",
+          "#15292b",
+          "#28484c",
+          "#43696d",
+          "#648a8e",
+          "#86adb2",
+          "#afd1d4",
+          "#dcf4f6"
+        ]
+      },
+      "ink-soft": {
+        "role": "primary",
+        "displayName": "Shallow-Water Ink",
+        "canonical": "oklch(37.0% 0.048 203.6)",
+        "tonalRamp": [
+          "#040d0e",
+          "#12292b",
+          "#24494c",
+          "#3f696d",
+          "#608b8f",
+          "#82aeb3",
+          "#abd1d5",
+          "#daf4f7"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(46.1% 0.040 202.9)",
+        "tonalRamp": [
+          "#050d0e",
+          "#16292a",
+          "#2b484a",
+          "#46686b",
+          "#678a8d",
+          "#89adb0",
+          "#b1d0d3",
+          "#def3f5"
+        ]
+      },
+      "foam": {
+        "role": "neutral",
+        "displayName": "Foam",
+        "canonical": "oklch(97.6% 0.012 184.1)",
+        "tonalRamp": [
+          "#090c0b",
+          "#212625",
+          "#3c4443",
+          "#5a6462",
+          "#7b8583",
+          "#9da8a6",
+          "#c2cbca",
+          "#eaf0ef"
+        ]
+      },
+      "foam-soft": {
+        "role": "neutral",
+        "displayName": "Soft Foam",
+        "canonical": "oklch(93.3% 0.027 185.2)",
+        "tonalRamp": [
+          "#070c0c",
+          "#1c2826",
+          "#344644",
+          "#506663",
+          "#718884",
+          "#93aba7",
+          "#bacecb",
+          "#e4f2f0"
+        ]
+      },
+      "grout": {
+        "role": "neutral",
+        "displayName": "Warm Grout",
+        "canonical": "oklch(96.2% 0.011 84.6)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#272521",
+          "#44423c",
+          "#64615a",
+          "#85827b",
+          "#a8a59d",
+          "#ccc9c2",
+          "#f0eee9"
+        ]
+      },
+      "niche-white": {
+        "role": "neutral",
+        "displayName": "Niche White",
+        "canonical": "oklch(96.5% 0.015 186.7)",
+        "tonalRamp": [
+          "#090c0b",
+          "#202726",
+          "#3a4443",
+          "#586462",
+          "#798584",
+          "#9ba8a6",
+          "#c0ccca",
+          "#e8f0ef"
+        ]
+      },
+      "lemon": {
+        "role": "secondary",
+        "displayName": "Shampoo Lemon",
+        "canonical": "oklch(85.2% 0.157 90.2)",
+        "tonalRamp": [
+          "#140900",
+          "#372000",
+          "#5e3a00",
+          "#835900",
+          "#a67b00",
+          "#cb9f00",
+          "#ebc558",
+          "#ffeda7"
+        ]
+      },
+      "lemon-hi": {
+        "role": "secondary",
+        "displayName": "Lemon Highlight",
+        "canonical": "oklch(91.6% 0.128 94.1)",
+        "tonalRamp": [
+          "#110a00",
+          "#322300",
+          "#563f00",
+          "#795e00",
+          "#9c8000",
+          "#bfa337",
+          "#e0c873",
+          "#ffefb6"
+        ]
+      },
+      "coral": {
+        "role": "tertiary",
+        "displayName": "Conditioner Coral",
+        "canonical": "oklch(77.2% 0.111 33.4)",
+        "tonalRamp": [
+          "#190502",
+          "#40160d",
+          "#6d2a1c",
+          "#964635",
+          "#bb6855",
+          "#e28a77",
+          "#ffb3a1",
+          "#ffe0d3"
+        ]
+      },
+      "coral-deep": {
+        "role": "tertiary",
+        "displayName": "Deep Coral",
+        "canonical": "oklch(68.9% 0.131 33.3)",
+        "tonalRamp": [
+          "#1b0301",
+          "#441107",
+          "#732313",
+          "#9e3f2b",
+          "#c4614c",
+          "#eb846e",
+          "#ffae9a",
+          "#ffddce"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error Brick",
+        "canonical": "oklch(46.8% 0.148 32.3)",
+        "tonalRamp": [
+          "#1c0201",
+          "#480c03",
+          "#781b0a",
+          "#a43724",
+          "#cb5b46",
+          "#f37e68",
+          "#ffaa95",
+          "#ffdaca"
+        ]
+      },
+      "error-on-deep": {
+        "role": "neutral",
+        "displayName": "Error Blush",
+        "canonical": "oklch(83.6% 0.091 33.2)",
+        "tonalRamp": [
+          "#160604",
+          "#3c1912",
+          "#663024",
+          "#8e4c3e",
+          "#b26d5e",
+          "#d89080",
+          "#f7b7a9",
+          "#ffe2d8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "One per depth band."
+      },
+      "headline-small": {
+        "displayName": "Headline Small",
+        "purpose": "Sub-sections inside a band: benefits, FAQ, quiz verdict."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Niche names, step titles, quiz questions."
+      },
+      "marker": {
+        "displayName": "Marker",
+        "purpose": "Depth plaques, step numerals and the gauge, condensed with tabular numerals."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "The DROP wordmark only."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Form labels, notes, perks, consent."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons and text links."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tile-lip",
+        "value": "0 2px 0 rgba(0,0,0,.18), 0 6px 14px -6px rgba(0,0,0,.5)",
+        "purpose": "Buttons at rest."
+      },
+      {
+        "name": "tile-lip-hover",
+        "value": "0 3px 0 rgba(0,0,0,.18), 0 10px 18px -8px rgba(0,0,0,.55)",
+        "purpose": "Button hover, paired with a 1px lift."
+      },
+      {
+        "name": "tile-lip-pressed",
+        "value": "0 1px 0 rgba(0,0,0,.18)",
+        "purpose": "Button active."
+      },
+      {
+        "name": "tile-lip-deep",
+        "value": "0 2px 0 rgba(0,0,0,.25), 0 8px 16px -8px rgba(0,0,0,.5)",
+        "purpose": "Buttons on glaze-4 and deeper."
+      },
+      {
+        "name": "plaque-set",
+        "value": "0 1px 0 rgba(255,255,255,.7) inset, 0 2px 6px rgba(0,0,0,.18)",
+        "purpose": "Depth plaques."
+      },
+      {
+        "name": "readout",
+        "value": "0 2px 8px rgba(0,0,0,.25)",
+        "purpose": "Floating gauge readout."
+      },
+      {
+        "name": "niche-recess",
+        "value": "inset 0 8px 14px -6px rgba(0,0,0,.32), inset 0 -1px 0 rgba(255,255,255,.8)",
+        "purpose": "Product niches cut into the wall."
+      },
+      {
+        "name": "object-drop",
+        "value": "drop-shadow(0 6px 6px rgba(0,0,0,.22))",
+        "purpose": "Filter on drawn bars."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #f6c93c; outline-offset: 3px",
+        "purpose": "All keyboard focus; fields use border ink + 0 0 0 3px lemon."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "House curve for lifts, reveals and the FAQ plus rotation."
+      },
+      {
+        "name": "control-lift",
+        "value": "transform .25s, background-color .2s",
+        "purpose": "Buttons and quiz options."
+      },
+      {
+        "name": "settle",
+        "value": "1.4s ease-out; from translateY(-26px) rotate(-3deg)",
+        "purpose": "Hero bar settling onto its tin; reduced-motion gated."
+      },
+      {
+        "name": "rise",
+        "value": ".5s ease-out; from opacity .4, translateY(8px)",
+        "purpose": "Quiz question and result reveals; reduced-motion gated."
+      },
+      {
+        "name": "faq-toggle",
+        "value": "rotate(45deg) over .3s",
+        "purpose": "Lemon plus becomes a close mark."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "520px"
+      },
+      {
+        "name": "two-up",
+        "value": "600px"
+      },
+      {
+        "name": "tablet",
+        "value": "760px"
+      },
+      {
+        "name": "split",
+        "value": "900px"
+      },
+      {
+        "name": "four-up",
+        "value": "1040px"
+      },
+      {
+        "name": "wall-margin",
+        "value": "1180px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Deep-teal tile-lipped button for every primary action on light glaze.",
+      "html": "<button class=\"ds-btn\">Join the waitlist</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border:0;border-radius:2px;background:#0b3236;color:#f6f2ea;font:700 1rem/1 'Hanken Grotesk',system-ui,sans-serif;cursor:pointer;box-shadow:0 2px 0 rgba(0,0,0,.18),0 6px 14px -6px rgba(0,0,0,.5);transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .25s cubic-bezier(.16,1,.3,1)}.ds-btn:hover{background:#134a4f;transform:translateY(-1px);box-shadow:0 3px 0 rgba(0,0,0,.18),0 10px 18px -8px rgba(0,0,0,.55)}.ds-btn:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(0,0,0,.18)}.ds-btn:focus-visible{outline:3px solid #f6c93c;outline-offset:3px}"
+    },
+    {
+      "name": "Lemon Button",
+      "kind": "button",
+      "refersTo": "button-lemon",
+      "description": "Lemon-filled button for actions on deep glaze.",
+      "html": "<div style=\"background:#0c4145;padding:24px\"><button class=\"ds-btn-lemon\">Join the waitlist</button></div>",
+      "css": ".ds-btn-lemon{display:inline-flex;align-items:center;min-height:52px;padding:0 22px;border:0;border-radius:2px;background:#f6c93c;color:#0b3236;font:700 1rem/1 'Hanken Grotesk',system-ui,sans-serif;cursor:pointer;box-shadow:0 2px 0 rgba(0,0,0,.25),0 8px 16px -8px rgba(0,0,0,.5);transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s}.ds-btn-lemon:hover{background:#ffe27a;transform:translateY(-1px)}.ds-btn-lemon:focus-visible{outline:3px solid #f6c93c;outline-offset:3px}"
+    },
+    {
+      "name": "Email Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "White tile-edged field with grout border and lemon focus ring.",
+      "html": "<input class=\"ds-field\" type=\"email\" placeholder=\"you@email.com\">",
+      "css": ".ds-field{width:100%;min-height:52px;padding:0 16px;border:2px solid #f6f2ea;border-radius:2px;background:#fff;color:#0b3236;font:500 1rem/1.2 'Hanken Grotesk',system-ui,sans-serif;transition:border-color .2s,box-shadow .2s}.ds-field::placeholder{color:#4d6f72}.ds-field:hover{border-color:#d9e9e6}.ds-field:focus{outline:none;border-color:#0b3236;box-shadow:0 0 0 3px #f6c93c}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Drop mark and wide wordmark left, links and small button right, on surface tile.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\"><svg width=\"18\" height=\"24\" viewBox=\"0 0 24 32\"><path d=\"M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z\" fill=\"#f6c93c\" stroke=\"#0b3236\" stroke-width=\"1.6\"/></svg><span>DROP</span></a><nav><a href=\"#\">Why syndet</a><a href=\"#\">How it works</a></nav><a class=\"ds-nav-btn\" href=\"#\">Join the waitlist</a></header>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:24px;padding:18px 24px;background:#cdeeea;color:#0b3236;font:400 1.0625rem/1.6 'Hanken Grotesk',system-ui,sans-serif}.ds-brand{display:inline-flex;align-items:center;gap:8px;color:#0b3236;text-decoration:none;font:900 1.5rem/1 Anybody,'Hanken Grotesk',sans-serif;font-stretch:140%;letter-spacing:.02em}.ds-nav nav{margin-left:auto;display:flex;gap:28px}.ds-nav nav a{color:inherit;font-weight:600;text-decoration:none}.ds-nav nav a:hover{text-decoration:underline}.ds-nav nav a:focus-visible,.ds-nav-btn:focus-visible{outline:3px solid #f6c93c;outline-offset:3px}.ds-nav-btn{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:2px;background:#0b3236;color:#f6f2ea;font:700 .9375rem/1 'Hanken Grotesk',sans-serif;text-decoration:none}.ds-nav-btn:hover{background:#134a4f}"
+    },
+    {
+      "name": "Status Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Ink status tag on product niches.",
+      "html": "<span class=\"ds-tag\">Coming soon</span>",
+      "css": ".ds-tag{display:inline-block;padding:5px 10px;background:#0b3236;color:#f6f2ea;font:700 .8125rem/1 'Hanken Grotesk',sans-serif;letter-spacing:.04em;text-transform:uppercase;border-radius:2px}"
+    },
+    {
+      "name": "Product Niche",
+      "kind": "card",
+      "refersTo": "niche",
+      "description": "A container recessed into the tile wall, holding a drawn pigment drop.",
+      "html": "<article class=\"ds-niche\"><svg width=\"56\" height=\"74\" viewBox=\"0 0 24 32\"><path d=\"M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z\" fill=\"#f6c93c\" stroke=\"rgba(0,0,0,.25)\" stroke-width=\".6\"/></svg><h3>Everyday Shampoo Bar</h3><p>For normal hair. Fresh scent, quick lather.</p></article>",
+      "css": ".ds-niche{padding:28px;background:#e9f7f5;border-radius:2px;color:#0b3236;box-shadow:inset 0 8px 14px -6px rgba(0,0,0,.32),inset 0 -1px 0 rgba(255,255,255,.8);font:400 1.0625rem/1.6 'Hanken Grotesk',sans-serif}.ds-niche svg{margin-bottom:18px;filter:drop-shadow(0 6px 6px rgba(0,0,0,.22))}.ds-niche h3{margin:0;font:800 1.5rem/1.1 Anybody,sans-serif;font-stretch:96%;letter-spacing:-.01em}.ds-niche p{margin:8px 0 0;color:#1c474b}"
+    },
+    {
+      "name": "Tile Slab Row",
+      "kind": "card",
+      "refersTo": "tile-slab",
+      "description": "Grout-white slab rows joined by 4px gaps; old way struck in coral, new way in ink.",
+      "html": "<ul class=\"ds-slabs\"><li><p class=\"was\"><s>Waxy, coated hair</s></p><p>Syndet cleansers, the same family as liquid shampoo.</p></li><li><p class=\"was\"><s>Dry, rough ends</s></p><p>A conditioner bar made to detangle and smooth.</p></li></ul>",
+      "css": ".ds-slabs{list-style:none;margin:0;padding:12px;display:grid;gap:4px;background:#b6e4df;font:600 1rem/1.6 'Hanken Grotesk',sans-serif}.ds-slabs li{display:grid;grid-template-columns:.8fr 1.2fr;gap:4px 32px;padding:20px 28px;background:#f6f2ea;border-radius:2px;color:#0b3236}.ds-slabs p{margin:0}.ds-slabs .was{color:#3d5f62}.ds-slabs s{text-decoration-thickness:2px;text-decoration-color:#e07a64}"
+    },
+    {
+      "name": "Depth Plaque",
+      "kind": "custom",
+      "refersTo": "depth-plaque",
+      "description": "White pool-depth marker tile with condensed numerals, set into each band.",
+      "html": "<div style=\"background:#9cd8d2;padding:28px\"><span class=\"ds-plaque\">1.0<small>m</small></span></div>",
+      "css": ".ds-plaque{display:inline-flex;align-items:baseline;justify-content:center;width:110px;height:54px;padding-top:9px;background:#f6f2ea;color:#0b3236;font:850 2.25rem/1 Anybody,'Hanken Grotesk',sans-serif;font-stretch:58%;letter-spacing:.01em;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 2px 6px rgba(0,0,0,.18)}.ds-plaque small{font-size:.62em;margin-left:.12em;font-weight:700}"
+    },
+    {
+      "name": "Quiz Option",
+      "kind": "custom",
+      "refersTo": "quiz-option",
+      "description": "Deep-teal tile choice that fills lemon when checked.",
+      "html": "<div class=\"ds-opts\"><label class=\"ds-opt\"><input type=\"radio\" name=\"q\" checked><span>Liquid shampoo and conditioner</span></label><label class=\"ds-opt\"><input type=\"radio\" name=\"q\"><span>A 2-in-1</span></label></div>",
+      "css": ".ds-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:24px;background:#145a5e;color:#effaf8;font:600 1rem/1.4 'Hanken Grotesk',sans-serif}.ds-opt{position:relative;display:block;cursor:pointer}.ds-opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}.ds-opt span{display:flex;align-items:center;min-height:64px;padding:14px 20px;background:#0d4a4e;border:2px solid rgba(246,242,234,.5);border-radius:2px;transition:background-color .2s,border-color .2s}.ds-opt:hover span{background:#0a3f42;border-color:#f6f2ea}.ds-opt input:focus-visible+span{outline:3px solid #f6c93c;outline-offset:3px}.ds-opt input:checked+span{background:#f6c93c;border-color:#f6c93c;color:#0b3236}"
+    },
+    {
+      "name": "Tile Wall Band",
+      "kind": "custom",
+      "refersTo": "depth",
+      "description": "The ground: glazed square tile with warm grout lines and a soft sheen.",
+      "html": "<section class=\"ds-wall\"><h2>Syndet, not soap.</h2></section>",
+      "css": ".ds-wall{padding:56px 28px;background-color:#9cd8d2;background-image:linear-gradient(135deg,rgba(255,255,255,.22) 0,rgba(255,255,255,0) 38%),linear-gradient(to right,rgba(246,242,234,.62) 2px,transparent 2px),linear-gradient(to bottom,rgba(246,242,234,.62) 2px,transparent 2px);background-size:56px 56px;background-position:-1px -1px;color:#0b3236}.ds-wall h2{margin:0;font:850 3rem/.98 Anybody,sans-serif;font-stretch:104%;letter-spacing:-.03em}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pool Wall You Descend",
+    "overview": "**Creative North Star: \"The Pool Wall You Descend\"**\n\nThe shower is the brand surface. Every band of the page is a field of glazed square tile set in warm off-white grout, and the glaze steps from pale aqua at the surface to deep teal at the bottom, one tone per section. A depth gauge pinned to the viewport and white depth-marker plaques set into the wall (0.5 m, 1.0 m ... 3.0 m) make scrolling read as going deeper. The products appear as what they are: pigmented water-drop bars, lemon for shampoo and coral for conditioner.\n\nThe world is bright, clean and a little playful, built from real bathroom material rather than eco clichés. Density is moderate: generous tile-sized vertical rhythm, copy set on grout-white slabs and recessed niches, controls that feel like tile edges. Type does the loud work. Anybody's width axis is stretched wide and heavy for headlines and squeezed condensed for depth numerals, while Hanken Grotesk carries everything a visitor actually reads.\n\nConfirmed rejection: the category default of a cream or kraft \"eco\" page with botanical sprigs and a split hero beside a product shot. Drop's ground is tile and water, never paper and leaves.",
+    "keyCharacteristics": [
+      "A 56px square tile grid with 2px grout lines and a soft 135-degree glaze sheen is the ground of every band.",
+      "Seven glaze tones map to depth; light glazes carry ink text, deep glazes carry foam text.",
+      "Grout-white slabs, recessed niches and white plaques are the only \"cards\".",
+      "Lemon is both the shampoo pigment and the single interaction accent.",
+      "Square-edged controls (2px radius) with deep-teal fills.",
+      "Anybody's width axis encodes role: wide for the wordmark, near-normal for headlines, condensed for numerals."
+    ],
+    "rules": [
+      {
+        "name": "The Glaze Descent Rule",
+        "body": "A band's background is chosen by its depth, glaze-0 at 0.0 m through glaze-6 at 3.0 m, in order, one step per section. Never jump back up the ramp mid-page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Pigments Rule",
+        "body": "Lemon and coral exist because the bars are lemon and coral. Coral never becomes a UI accent; lemon is the only color that signals focus, selection or progress.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Axis Rule",
+        "body": "Anybody's width is a role signal: condensed (58–62%) for depth numerals and counters, near-normal (90–112%) for headlines and titles, wide (140%) for the wordmark alone.",
+        "section": "typography"
+      },
+      {
+        "name": "The Readable Water Rule",
+        "body": "Anything longer than a title is Hanken Grotesk. Anybody never sets a paragraph.",
+        "section": "typography"
+      },
+      {
+        "name": "The Grout Never Crosses Copy Rule",
+        "body": "From 2.0 m down, each section's content sits on a solid glaze slab with a 2px grout-line outline and clamp(20px, 3vw, 36px) padding, so grid lines never run behind text in the deep end.",
+        "section": "layout"
+      },
+      {
+        "name": "The Recessed Niche Rule",
+        "body": "Product containers are cut into the wall, not floated off it. Use the inset recess, never a lifted card shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do start every band from the tile ground: 56px grid, 2px grout lines, glaze color by depth.",
+      "Do put a depth plaque on every new band and keep the gauge in sync with it.",
+      "Do switch text to foam and foam-soft on glaze-4 and deeper, and set copy there on solid slabs.",
+      "Do keep controls at 2px corners with 2px grout or ink borders and deep-teal fills.",
+      "Do use lemon for every focus, selection, checked and progress state (3px outline, 3px offset).",
+      "Do draw the bars as pigmented water drops (lemon shampoo, coral conditioner) with a soft object shadow.",
+      "Do honor reduced motion: the bar's settle and the quiz's rise only run under `prefers-reduced-motion: no-preference`."
+    ],
+    "donts": [
+      "Don't use a cream or kraft ground, botanical sprigs, or a split hero beside a product shot.",
+      "Don't round controls or slabs past 2px; soft curves belong to the drop shape and drawn objects.",
+      "Don't use coral as a UI accent or introduce a third accent hue.",
+      "Don't float cards on drop shadows; containers are slabs on the wall or niches cut into it.",
+      "Don't let grout lines run behind body copy from 2.0 m down.",
+      "Don't set paragraphs in Anybody, or use its wide (140%) width for anything but the wordmark."
+    ]
+  }
+}

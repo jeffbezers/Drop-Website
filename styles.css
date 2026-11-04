@@ -220,6 +220,7 @@ select.field {
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
+.textlink__arrow { width: 1em; height: 1em; align-self: center; }
 .textlink:hover { text-decoration-color: var(--lemon); }
 .textlink--button { background: none; border: 0; padding: 0; font: inherit; font-weight: 700; cursor: pointer; }
 
