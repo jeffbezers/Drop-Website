@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drop — Your shower, minus the plastic</title>
+  <meta name="description" content="Drop makes plastic-free shampoo and conditioner bars that lather and rinse like the liquid stuff. Join the waitlist or sign up to test them first.">
+  <meta name="theme-color" content="#cdeeea">
+  <meta property="og:title" content="Drop — Your shower, minus the plastic">
+  <meta property="og:description" content="High-performance shampoo and conditioner bars. No plastic bottle required.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Depth gauge: decorative wayfinding, mirrors the section the visitor is in -->
+  <div class="gauge" aria-hidden="true">
+    <div class="gauge__rail">
+      <span class="gauge__tick" style="--at:0">0.0</span>
+      <span class="gauge__tick" style="--at:.5">1.5</span>
+      <span class="gauge__tick" style="--at:1">3.0</span>
+      <span class="gauge__marker"></span>
+    </div>
+    <span class="gauge__readout"><span data-depth>0.0</span> m</span>
+  </div>
+
+  <header class="nav depth" data-depth-value="0.0">
+    <a class="brand" href="#top" aria-label="Drop, back to top">
+      <svg class="brand__mark" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/></svg>
+      <span class="brand__word">DROP</span>
+    </a>
+    <nav aria-label="Sections">
+      <ul class="nav__links">
+        <li><a href="#syndet">Why syndet</a></li>
+        <li><a href="#lineup">The lineup</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--small" href="#waitlist">Join the waitlist</a>
+  </header>
+
+  <main id="main">
+    <!-- 0.0 m — Hero -->
+    <section class="hero depth" id="top" data-depth-value="0.0" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 id="hero-title" class="hero__title">Your shower, minus the plastic.</h1>
+        <p class="hero__lede">High-performance shampoo and conditioner bars made with syndet cleansers instead of soap, so they lather and rinse like the liquid shampoo you already use.</p>
+
+        <form class="signup" id="waitlist" data-form="waitlist" novalidate>
+          <label class="signup__label" for="waitlist-email">Get first dibs when Drop launches</label>
+          <div class="signup__row">
+            <input class="field" id="waitlist-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
+            <button class="btn" type="submit">Join the waitlist</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <a class="textlink" href="#beta">Or test the bars before anyone else <span aria-hidden="true">→</span></a>
+      </div>
+
+      <figure class="hero__art" aria-hidden="true">
+        <svg class="bar-scene" viewBox="0 0 420 420">
+          <defs>
+            <linearGradient id="bar-yellow" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffe27a"/>
+              <stop offset=".55" stop-color="#f6c93c"/>
+              <stop offset="1" stop-color="#e2a91e"/>
+            </linearGradient>
+            <linearGradient id="tin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#eef3f2"/>
+              <stop offset="1" stop-color="#a9b7b6"/>
+            </linearGradient>
+            <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="9"/>
+            </filter>
+          </defs>
+          <!-- tin -->
+          <ellipse cx="210" cy="356" rx="150" ry="22" fill="#0b3236" opacity=".18" filter="url(#soft)"/>
+          <path d="M70 318h280l-18 34H88Z" fill="url(#tin)"/>
+          <rect x="70" y="306" width="280" height="14" rx="3" fill="#f6f9f8"/>
+          <g fill="#8fa3a2">
+            <rect x="112" y="326" width="36" height="5" rx="2.5"/>
+            <rect x="160" y="326" width="36" height="5" rx="2.5"/>
+            <rect x="208" y="326" width="36" height="5" rx="2.5"/>
+            <rect x="256" y="326" width="36" height="5" rx="2.5"/>
+          </g>
+          <!-- bar -->
+          <g class="bar-scene__bar">
+            <ellipse cx="210" cy="306" rx="96" ry="9" fill="#0b3236" opacity=".22" filter="url(#soft)"/>
+            <path d="M210 44C210 44 112 170 112 222a98 84 0 0 0 196 0C308 170 210 44 210 44Z" fill="url(#bar-yellow)"/>
+            <path d="M210 70C210 70 132 176 132 220c0 10 3 20 8 28C150 190 190 118 210 70Z" fill="#fff6c9" opacity=".55"/>
+            <text x="210" y="238" text-anchor="middle" class="bar-scene__emboss">DROP</text>
+          </g>
+        </svg>
+        <figcaption class="sr-only">Illustration of the drop-shaped shampoo bar resting on a draining tin.</figcaption>
+      </figure>
+
+      <span class="plaque plaque--hero" aria-hidden="true">0.0<small>m</small></span>
+    </section>
+
+    <!-- 0.5 m — The reputation problem -->
+    <section class="section depth depth--1" data-depth-value="0.5" aria-labelledby="problem-title">
+      <span class="plaque" aria-hidden="true">0.5<small>m</small></span>
+      <div class="section__inner">
+        <h2 id="problem-title" class="section__title">Shampoo bars have a reputation. Fair enough.</h2>
+        <p class="section__lede">Most people who quit bars quit for the same few reasons. We started there.</p>
+
+        <ol class="fixes">
+          <li class="fix">
+            <p class="fix__was"><s>Waxy, coated hair</s></p>
+            <p class="fix__now">Syndet cleansers, the same family as liquid shampoo, built to rinse clean.</p>
+          </li>
+          <li class="fix">
+            <p class="fix__was"><s>Dry, rough ends</s></p>
+            <p class="fix__now">A conditioner bar made to detangle and smooth, without weighing hair down.</p>
+          </li>
+          <li class="fix">
+            <p class="fix__was"><s>A mushy puddle in the soap dish</s></p>
+            <p class="fix__now">Every Starter Kit comes with a draining tin, so the bar dries between showers.</p>
+          </li>
+          <li class="fix">
+            <p class="fix__was"><s>“Wait, how do I even use this?”</s></p>
+            <p class="fix__now">Four steps. Takes about as long as squeezing a bottle.</p>
+          </li>
+          <li class="fix">
+            <p class="fix__was"><s>Too earthy, too niche</s></p>
+            <p class="fix__now">Made to look good in your shower and smell good in your hair.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 1.0 m — Syndet, not soap -->
+    <section class="section depth depth--2" id="syndet" data-depth-value="1.0" aria-labelledby="syndet-title">
+      <span class="plaque" aria-hidden="true">1.0<small>m</small></span>
+      <div class="section__inner section__inner--split">
+        <div>
+          <h2 id="syndet-title" class="section__title">Syndet, not soap.</h2>
+          <p class="section__lede">Traditional soap bars are oils mixed with lye. That makes them alkaline, which is great for hands and rough on hair. A syndet (synthetic detergent) bar uses mild cleansers, like the ones in liquid shampoo, pressed into a solid.</p>
+          <p class="note">Our launch formulas are being finalized with a cosmetic chemist. Below is what we’re formulating for, not finished lab results. We’ll publish the full ingredient list before launch.</p>
+        </div>
+
+        <div class="compare" role="table" aria-label="Soap bar compared with Drop syndet bar">
+          <div class="compare__row compare__row--head" role="row">
+            <span role="columnheader"><span class="sr-only">Quality</span></span>
+            <span role="columnheader">Soap bar</span>
+            <span role="columnheader">Drop</span>
+          </div>
+          <div class="compare__row" role="row">
+            <span role="rowheader">Made from</span>
+            <span role="cell">Oils + lye</span>
+            <span role="cell">Gentle, coconut-derived cleansers</span>
+          </div>
+          <div class="compare__row" role="row">
+            <span role="rowheader">Lather</span>
+            <span role="cell">Slow, can feel squeaky</span>
+            <span role="cell">Designed to lather like liquid shampoo</span>
+          </div>
+          <div class="compare__row" role="row">
+            <span role="rowheader">After rinsing</span>
+            <span role="cell">Can leave a waxy film</span>
+            <span role="cell">Formulated to rinse clean</span>
+          </div>
+          <div class="compare__row" role="row">
+            <span role="rowheader">Packaging</span>
+            <span role="cell">Often paper</span>
+            <span role="cell">Plastic-free</span>
+          </div>
+          <div class="compare__row" role="row">
+            <span role="rowheader">We’re aiming for</span>
+            <span role="cell">—</span>
+            <span role="cell">Vegan, sulfate-free, silicone-free, made without parabens or phthalates</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1.5 m — Lineup -->
+    <section class="section depth depth--3" id="lineup" data-depth-value="1.5" aria-labelledby="lineup-title">
+      <span class="plaque" aria-hidden="true">1.5<small>m</small></span>
+      <div class="section__inner">
+        <h2 id="lineup-title" class="section__title">Start with two bars and a tin.</h2>
+        <p class="section__lede">A small launch on purpose. Get these right first.</p>
+
+        <div class="lineup">
+          <article class="niche niche--shampoo">
+            <svg class="niche__drop" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/></svg>
+            <h3 class="niche__name">Everyday Shampoo Bar</h3>
+            <p class="niche__desc">For normal hair. Fresh scent, quick lather.</p>
+            <span class="tag">Coming soon</span>
+          </article>
+          <article class="niche niche--conditioner">
+            <svg class="niche__drop" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/></svg>
+            <h3 class="niche__name">Moisture Conditioner Bar</h3>
+            <p class="niche__desc">Detangles and smooths. Not too heavy.</p>
+            <span class="tag">Coming soon</span>
+          </article>
+          <article class="niche niche--kit">
+            <div class="niche__set" aria-hidden="true">
+              <svg class="niche__drop niche__drop--a" viewBox="0 0 24 32"><path d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/></svg>
+              <svg class="niche__drop niche__drop--b" viewBox="0 0 24 32"><path d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/></svg>
+              <span class="niche__tin"></span>
+            </div>
+            <div>
+              <h3 class="niche__name">The Starter Kit</h3>
+              <p class="niche__desc">Shampoo bar, conditioner bar, and a draining tin that works in the shower and in your bag. The easiest way to switch.</p>
+              <span class="tag">Coming soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.0 m — How it works -->
+    <section class="section depth depth--4" id="how" data-depth-value="2.0" aria-labelledby="how-title">
+      <span class="plaque" aria-hidden="true">2.0<small>m</small></span>
+      <div class="section__inner">
+        <h2 id="how-title" class="section__title">Four steps. No learning curve.</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n" aria-hidden="true">1</span>
+            <h3 class="step__title">Wet it</h3>
+            <p>Get your hair soaked and give the bar a quick dip.</p>
+          </li>
+          <li class="step">
+            <span class="step__n" aria-hidden="true">2</span>
+            <h3 class="step__title">Glide it</h3>
+            <p>Run the shampoo bar over your scalp a few times, or lather it between your hands first.</p>
+          </li>
+          <li class="step">
+            <span class="step__n" aria-hidden="true">3</span>
+            <h3 class="step__title">Rinse, then condition</h3>
+            <p>Rinse clean. Smooth the conditioner bar down your lengths, wait a minute, rinse again.</p>
+          </li>
+          <li class="step">
+            <span class="step__n" aria-hidden="true">4</span>
+            <h3 class="step__title">Park it</h3>
+            <p>Set both bars on the tin, out of the spray, so they drain and stay firm.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 2.5 m — Would you switch? -->
+    <section class="section depth depth--5" id="quiz" data-depth-value="2.5" aria-labelledby="quiz-title">
+      <span class="plaque" aria-hidden="true">2.5<small>m</small></span>
+      <div class="section__inner">
+        <h2 id="quiz-title" class="section__title">Would you switch?</h2>
+        <p class="section__lede">Three quick taps. Your answers help us decide what to make next.</p>
+
+        <form class="quiz" data-quiz>
+          <fieldset class="quiz__q" data-step="0">
+            <legend>What’s in your shower right now?</legend>
+            <div class="quiz__opts">
+              <label class="opt"><input type="radio" name="current" value="liquid"><span>Liquid shampoo and conditioner</span></label>
+              <label class="opt"><input type="radio" name="current" value="2in1"><span>A 2-in-1</span></label>
+              <label class="opt"><input type="radio" name="current" value="bars-before"><span>I’ve tried bars before</span></label>
+              <label class="opt"><input type="radio" name="current" value="whatever"><span>Whatever’s there</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="quiz__q" data-step="1" hidden>
+            <legend>What would make you switch?</legend>
+            <div class="quiz__opts">
+              <label class="opt"><input type="radio" name="priority" value="results"><span>Better hair, full stop</span></label>
+              <label class="opt"><input type="radio" name="priority" value="plastic"><span>Less plastic</span></label>
+              <label class="opt"><input type="radio" name="priority" value="travel"><span>Easier travel</span></label>
+              <label class="opt"><input type="radio" name="priority" value="ingredients"><span>Knowing what’s in it</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="quiz__q" data-step="2" hidden>
+            <legend>What’s your hair like?</legend>
+            <div class="quiz__opts">
+              <label class="opt"><input type="radio" name="hair" value="straight"><span>Straight</span></label>
+              <label class="opt"><input type="radio" name="hair" value="wavy"><span>Wavy</span></label>
+              <label class="opt"><input type="radio" name="hair" value="curly"><span>Curly</span></label>
+              <label class="opt"><input type="radio" name="hair" value="coily"><span>Coily</span></label>
+            </div>
+          </fieldset>
+
+          <div class="quiz__result" data-result hidden tabindex="-1">
+            <p class="quiz__verdict" data-verdict></p>
+            <p data-verdict-body></p>
+            <div class="quiz__actions">
+              <a class="btn btn--light" href="#beta">Become a tester</a>
+              <button class="textlink textlink--button" type="button" data-restart>Start over</button>
+            </div>
+          </div>
+
+          <div class="quiz__progress" aria-hidden="true"><span></span><span></span><span></span></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 3.0 m — Beta + FAQ -->
+    <section class="section depth depth--6" id="beta" data-depth-value="3.0" aria-labelledby="beta-title">
+      <span class="plaque" aria-hidden="true">3.0<small>m</small></span>
+      <div class="section__inner section__inner--split">
+        <div>
+          <h2 id="beta-title" class="section__title">Test Drop before anyone else.</h2>
+          <p class="section__lede">We’re recruiting our first round of testers. You get free sample bars; we get your honest take on lather, scent, and how your hair feels after a week.</p>
+        </div>
+
+        <form class="beta" data-form="beta" novalidate>
+          <div class="beta__grid">
+            <label class="beta__field">
+              <span>First name</span>
+              <input class="field" name="name" autocomplete="given-name" required>
+            </label>
+            <label class="beta__field">
+              <span>Email</span>
+              <input class="field" name="email" type="email" autocomplete="email" required>
+            </label>
+            <label class="beta__field">
+              <span>Hair type</span>
+              <select class="field" name="hair" required>
+                <option value="">Choose one</option>
+                <option value="straight">Straight</option>
+                <option value="wavy">Wavy</option>
+                <option value="curly">Curly</option>
+                <option value="coily">Coily</option>
+              </select>
+            </label>
+            <label class="beta__field">
+              <span>What do you use now? <em>(optional)</em></span>
+              <input class="field" name="current_products" placeholder="Brand or type">
+            </label>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="age_ok" required>
+            <span>I’m 18 or older, or a parent or guardian is signing up for me.</span>
+          </label>
+          <input type="hidden" name="quiz_current">
+          <input type="hidden" name="quiz_priority">
+          <button class="btn btn--light" type="submit">Sign me up to test</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="section__inner faq" id="faq">
+        <h2 class="section__title section__title--small">Questions</h2>
+        <details>
+          <summary>Is this just soap?</summary>
+          <p>No. Soap is made from oils and lye. Drop bars use syndet cleansers, the same kind of gentle cleansers found in liquid shampoo, pressed into a solid bar.</p>
+        </details>
+        <details>
+          <summary>How long does a bar last?</summary>
+          <p>That’s one of the things our beta is measuring. We’ll share real numbers from testers instead of guessing.</p>
+        </details>
+        <details>
+          <summary>Will it work on curly or coily hair?</summary>
+          <p>The launch bars are made for normal hair. A curly and thick hair bar is on our list. Tell us your hair type when you sign up, and it helps us decide what comes next.</p>
+        </details>
+        <details>
+          <summary>Is it safe for color-treated hair?</summary>
+          <p>We haven’t tested that yet, so we won’t claim it. When we have, we’ll say so here.</p>
+        </details>
+        <details>
+          <summary>How do I stop it from getting mushy?</summary>
+          <p>Keep it out of standing water. The draining tin in the Starter Kit lets water run off so the bar dries between showers.</p>
+        </details>
+        <details>
+          <summary>When can I buy it?</summary>
+          <p>Not yet. Join the waitlist and you’ll hear first when preorders open.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer depth depth--6" data-depth-value="3.0">
+    <a class="brand brand--light" href="#top" aria-label="Drop, back to top">
+      <svg class="brand__mark" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/></svg>
+      <span class="brand__word">DROP</span>
+    </a>
+    <p class="footer__line">High-performance haircare. No plastic bottle required.</p>
+    <p class="footer__fine">© 2026 Drop. Illustrations are placeholders until real product photos are ready.</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
