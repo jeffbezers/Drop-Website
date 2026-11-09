@@ -7,7 +7,7 @@
  *   2. Paste its endpoint URL below, e.g. "https://formspree.io/f/abcdwxyz".
  * Both forms send to the same endpoint, with a "form" field saying which one it was.
  */
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://formspree.io/f/xzeelzwr";
 
 /* ---------------------------------------------------------------- gauge */
 (() => {
