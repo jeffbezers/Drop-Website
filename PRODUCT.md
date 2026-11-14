@@ -36,7 +36,7 @@ The brand promise is that switching feels easy, cool and actually better, withou
 - Planned launch line (a tight hero set):
   - Everyday Shampoo Bar: normal hair, fresh scent, easy lather.
   - Moisture Conditioner Bar: detangles and smooths without heaviness.
-  - Starter Kit: both bars plus a draining travel/shower tin.
+  - Starter Kit ("perfect for college"): both bars plus a draining travel/shower mesh bag.
 - Possible later lines (not announced): curly/thick, oily scalp, fragrance-free/sensitive, sport/travel, teen starter, mini sample pack.
 
 ## Capabilities and Constraints
@@ -56,11 +56,14 @@ The brand promise is that switching feels easy, cool and actually better, withou
 - Public wording: lead with "eco-friendly shampoo bar" and "no plastic bottle". Keep it plain; never use the word "syndet" on the site (say "real shampoo, made into a bar").
 - Voice: confident, transparent, useful, a little playful. Never preachy, guilt-driven or "eco but worse."
 - Approved lines:
-  - "Your shower, minus the plastic." (homepage hero)
+  - "Clean hair. Cleaner planet. No bottle required." (homepage opener)
+  - "High-performance haircare. Low-waste by design."
+  - "Your shower, minus the plastic."
   - "High-performance haircare. No plastic bottle required."
   - "Clean, high-performing, plastic-free haircare — made for real life."
   - "Plastic-free haircare that actually works."
   - "Shampoo bars for people who never thought they'd use shampoo bars."
+- Founder: Gavin Zuniga. His photo goes in the "Our story" section when ready.
 - Founder story (approved draft): "I discovered shampoo and conditioner bars and realized that one simple shower switch could change the way people think about everyday waste. But many bar products felt too rustic, too drying, or too niche. I wanted to create plastic-free haircare that felt modern, clean, beautiful, and genuinely effective — something people would actually want to keep using."
 
 ## Evidence on Hand

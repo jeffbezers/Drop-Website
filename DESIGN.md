@@ -29,4 +29,4 @@ Plain, friendly, short sentences. Lead with "eco-friendly shampoo bar" and "no p
 
 ## Page order
 
-Announcement bar, header, hero with waitlist form, four benefits, the three products, why a bar, eco band, how to use, photo strip, our story, quiz, tester signup, FAQ, closing waitlist, footer.
+Announcement bar, header, hero with waitlist form, four promises (works, smells amazing, looks good, low-waste), the switch (before and after shelf drawing), the Drop difference, what's really in your shower, the lineup, who it's for (with the travel band), the planet part, how to use, photo strip, founder story, quiz, tester signup, FAQ, closing waitlist, footer.
