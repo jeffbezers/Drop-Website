@@ -59,8 +59,10 @@
         </form>
         <a class="textlink" href="#quiz">Would you switch? Take the 30-second quiz</a>
       </div>
-      <div class="hero__photo photo">
-        <img src="https://images.unsplash.com/photo-1699787277166-9a288e408c60?auto=format&fit=crop&q=75&w=1400" alt="Soft, wavy hair seen from behind" width="1400" height="1600" fetchpriority="high">
+      <div class="hero__collage">
+        <div class="photo hero__main"><img src="https://images.unsplash.com/photo-1611083517823-b432dc3b7320?auto=format&fit=crop&q=75&w=1400" alt="Four friends walking together along a sunny beach" width="1400" height="933" fetchpriority="high"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1644945583242-1f7fdb6087ea?auto=format&fit=crop&q=75&w=800" alt="Two friends with long curly hair laughing on the sand near a pier" width="800" height="800" ></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1624680511607-bc9387d2e906?auto=format&fit=crop&q=75&w=800" alt="Santa Monica Pier and the beach seen from above" width="800" height="800" ></div>
       </div>
     </section>
 
@@ -99,20 +101,12 @@
       </div>
       <div class="swap">
         <figure class="swap__card">
-          <svg viewBox="0 0 240 170" role="img" aria-label="A shower shelf crowded with three plastic bottles">
-            <rect class="ill-b1" x="30" y="70" width="44" height="80" rx="8"/><rect class="ill-cap" x="42" y="54" width="20" height="16" rx="3"/>
-              <rect class="ill-b2" x="92" y="50" width="48" height="100" rx="10"/><rect class="ill-cap" x="110" y="30" width="12" height="20"/><rect class="ill-cap" x="102" y="24" width="32" height="8" rx="3"/>
-              <rect class="ill-b3" x="158" y="84" width="50" height="66" rx="8"/><rect class="ill-cap" x="172" y="70" width="22" height="14" rx="3"/>
-            <rect class="ill-shelf" x="10" y="150" width="220" height="6" rx="3"/>
-          </svg>
-          <figcaption><strong>Before</strong> A shelf full of plastic bottles.</figcaption>
+          <div class="photo"><img src="https://images.unsplash.com/photo-1539702232509-87c46098acf1?auto=format&fit=crop&q=75&w=900" alt="A pile of empty white plastic bottles" width="900" height="675" loading="lazy"></div>
+          <figcaption><strong>Before</strong> Plastic bottle after plastic bottle.</figcaption>
         </figure>
         <span class="swap__arrow" aria-hidden="true">→</span>
         <figure class="swap__card swap__card--after">
-          <svg viewBox="0 0 240 170" role="img" aria-label="The same shelf with one drop-shaped bar on it">
-            <path class="ill-bar" transform="translate(86 62) scale(2.8)" d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/>
-            <rect class="ill-shelf" x="10" y="150" width="220" height="6" rx="3"/>
-          </svg>
+          <div class="photo"><img src="https://images.unsplash.com/photo-1607006555271-0939bf0333eb?auto=format&fit=crop&q=75&w=900" alt="One white square bar resting on a small dish" width="900" height="675" loading="lazy"></div>
           <figcaption><strong>After</strong> One bar. That's it.</figcaption>
         </figure>
       </div>
@@ -121,7 +115,7 @@
     <!-- The difference -->
     <section class="split" id="difference" aria-labelledby="difference-title">
       <div class="split__photo photo">
-        <img src="https://images.unsplash.com/photo-1602549179763-ce6c9df961b7?auto=format&fit=crop&q=75&w=1200" alt="Long brown hair moving in a light breeze" width="1200" height="1400" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1660125741150-777623997e63?auto=format&fit=crop&q=75&w=1200" alt="A woman on the beach seen from behind, her hair blowing in the wind" width="1200" height="1400" loading="lazy">
       </div>
       <div class="split__copy">
         <p class="eyebrow">The Drop difference</p>
@@ -169,12 +163,32 @@
             <dd>Silicones coat hair to make it feel smooth, and they can build up over time. We skip them.</dd>
             <dt>Vegan and cruelty-free</dt>
             <dd>No animal ingredients and no animal testing.</dd>
+            <dt>No added color</dt>
+            <dd>We don't add dyes, so the bars are naturally white, pale yellow, or clear.</dd>
             <dt>Plastic-free</dt>
             <dd>No bottle, pump, or cap. The bar comes in a paper box.</dd>
           </dl>
         </div>
       </div>
       <p class="note note--center">We're finishing our formulas with a cosmetic chemist. The full ingredient list, with a plain explanation of what each one does, will be posted here before launch.</p>
+    </section>
+
+    <!-- Scents -->
+    <section class="section" id="scents" aria-labelledby="scents-title">
+      <div class="section__head">
+        <p class="eyebrow">Straight from nature</p>
+        <h2 id="scents-title" class="section__title">The scents we're exploring</h2>
+        <p class="section__lede">Fresh, clean, and nothing fake-smelling. These are the six we've tried so far. Tell us your favorite when you join the waitlist.</p>
+      </div>
+      <ul class="scents">
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1650964336695-448cc983e700?auto=format&fit=crop&q=75&w=600" alt="A sprig of fresh rosemary on a white surface" width="600" height="600" loading="lazy"></div><span>Rosemary</span></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1780599894862-de1f8f9bfa3d?auto=format&fit=crop&q=75&w=600" alt="Green eucalyptus branches" width="600" height="600" loading="lazy"></div><span>Eucalyptus</span></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1560769680-ba2f3767c785?auto=format&fit=crop&q=75&w=600" alt="Fresh coconut halves" width="600" height="600" loading="lazy"></div><span>Coconut</span></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1625934036482-2dccff707564?auto=format&fit=crop&q=75&w=600" alt="Stems of lavender" width="600" height="600" loading="lazy"></div><span>Lavender</span></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1777428904800-526ba92be805?auto=format&fit=crop&q=75&w=600" alt="Fine green tea tree leaves" width="600" height="600" loading="lazy"></div><span>Tea tree</span></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1589881132856-bd1a4af0ce4d?auto=format&fit=crop&q=75&w=600" alt="Halved lemons and limes" width="600" height="600" loading="lazy"></div><span>Citrus</span></li>
+      </ul>
+      <p class="scents__note">Citrus means lemon and lime.</p>
     </section>
 
     <!-- Lineup -->
@@ -188,16 +202,16 @@
       <div class="products">
         <article class="product">
           <div class="product__photo photo">
-            <img src="https://images.unsplash.com/photo-1726235812628-23558521686f?auto=format&fit=crop&q=75&w=900" alt="A bar of soap with eucalyptus leaves on a wooden table" width="900" height="900" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1618840152526-92682643af2d?auto=format&fit=crop&q=75&w=900" alt="Two white square bars beside green leaves" width="900" height="900" loading="lazy">
             <span class="tag">Coming soon</span>
           </div>
           <h3 class="product__name">Everyday Shampoo Bar</h3>
-          <p class="product__desc">A fresh-smelling bar that lathers fast and rinses out clean. Made for normal hair.</p>
+          <p class="product__desc">A square, fresh-smelling bar that lathers fast and rinses out clean. Made for normal hair.</p>
           <a class="textlink" href="#waitlist">Tell me when it's ready</a>
         </article>
         <article class="product">
           <div class="product__photo photo">
-            <img src="https://images.unsplash.com/photo-1607006344152-62699f97b42c?auto=format&fit=crop&q=75&w=900" alt="A white bar of soap on a white table" width="900" height="900" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1607006483224-73ce0729e22a?auto=format&fit=crop&q=75&w=900" alt="Three white square bars in soft sunlight" width="900" height="900" loading="lazy">
             <span class="tag">Coming soon</span>
           </div>
           <h3 class="product__name">Moisture Conditioner Bar</h3>
@@ -206,11 +220,26 @@
         </article>
         <article class="product">
           <div class="product__photo photo">
-            <img src="https://images.unsplash.com/photo-1542038335240-86aea625b913?auto=format&fit=crop&q=75&w=900" alt="A stack of three handmade bars" width="900" height="900" loading="lazy">
+            <svg class="mesh" viewBox="0 0 300 300" role="img" aria-label="Drawing of two mesh bags hanging in a shower, one holding a white shampoo bar and one holding a pale yellow conditioner bar">
+              <defs><pattern id="meshp" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H9M0 0V9" class="mesh__net"/></pattern></defs>
+              <rect x="20" y="34" width="260" height="8" rx="4" class="mesh__rail"/>
+              <g>
+                <path d="M72 96 92 46 112 96" class="mesh__string"/><circle cx="92" cy="44" r="6" class="mesh__hook"/>
+                <rect x="62" y="132" width="60" height="60" rx="7" class="mesh__bar mesh__bar--white" transform="rotate(-6 92 162)"/>
+                <path d="M48 96h88l8 104a22 22 0 0 1-22 24H62a22 22 0 0 1-22-24Z" fill="url(#meshp)" class="mesh__bag"/>
+                <text x="92" y="262" text-anchor="middle" class="mesh__label">Shampoo</text>
+              </g>
+              <g>
+                <path d="M188 96 208 46 228 96" class="mesh__string"/><circle cx="208" cy="44" r="6" class="mesh__hook"/>
+                <rect x="178" y="132" width="60" height="60" rx="7" class="mesh__bar mesh__bar--yellow" transform="rotate(5 208 162)"/>
+                <path d="M164 96h88l8 104a22 22 0 0 1-22 24h-60a22 22 0 0 1-22-24Z" fill="url(#meshp)" class="mesh__bag"/>
+                <text x="208" y="262" text-anchor="middle" class="mesh__label">Conditioner</text>
+              </g>
+            </svg>
             <span class="tag tag--accent">Perfect for college</span>
           </div>
           <h3 class="product__name">The Starter Kit</h3>
-          <p class="product__desc">A shampoo bar, a conditioner bar, and a mesh bag that drains in the shower and travels in your bag. Everything you need to make the switch.</p>
+          <p class="product__desc">A shampoo bar, a conditioner bar, and two mesh bags to hang them in your shower, one for each bar. The bags drain, dry fast, and travel in your bag.</p>
           <a class="textlink" href="#waitlist">Tell me when it's ready</a>
         </article>
       </div>
@@ -232,12 +261,12 @@
         <h2 id="for-title" class="section__title">Clean, high‑performing, plastic‑free haircare — made for real life.</h2>
       </div>
       <ul class="people">
-        <li><h3>Teens</h3><p>An easy first step into a low-waste routine.</p></li>
-        <li><h3>College students</h3><p>Fits in a shower caddy and holds up in a shared bathroom.</p></li>
-        <li><h3>Young professionals</h3><p>Good hair on a busy morning, and a tidier shower.</p></li>
-        <li><h3>Athletes</h3><p>Toss it in your gym bag. There's nothing to leak.</p></li>
-        <li><h3>Travelers</h3><p>It's solid, so it goes straight in your carry-on.</p></li>
-        <li><h3>Eco-conscious families</h3><p>One bar in the shower in place of a row of bottles.</p></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1767206105936-468e76a69fe4?auto=format&fit=crop&q=75&w=800" alt="Three friends with long hair at the beach at sunset" width="800" height="600" loading="lazy"></div><h3>Teens</h3><p>An easy first step into a low-waste routine.</p></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1758613171187-9a41d0fc93ab?auto=format&fit=crop&q=75&w=800" alt="Four friends laughing together in a park" width="800" height="600" loading="lazy"></div><h3>College students</h3><p>Fits in a shower caddy and holds up in a shared bathroom.</p></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?auto=format&fit=crop&q=75&w=800" alt="Three young adults talking outside" width="800" height="600" loading="lazy"></div><h3>Young professionals</h3><p>Good hair on a busy morning, and a tidier shower.</p></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&q=75&w=800" alt="Four friends sitting on a green mountainside after a hike" width="800" height="600" loading="lazy"></div><h3>Athletes</h3><p>Toss it in your gym bag. There's nothing to leak.</p></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1534396708547-d8e912eb38ba?auto=format&fit=crop&q=75&w=800" alt="Three hikers looking out over a mountain lake" width="800" height="600" loading="lazy"></div><h3>Travelers</h3><p>It's solid, so it goes straight in your carry-on.</p></li>
+        <li><div class="photo"><img src="https://images.unsplash.com/photo-1596510915124-38eaa5517966?auto=format&fit=crop&q=75&w=800" alt="A family with a small child walking on the beach" width="800" height="600" loading="lazy"></div><h3>Eco-conscious families</h3><p>One bar in the shower in place of a row of bottles.</p></li>
       </ul>
 
       <div class="pack">
@@ -246,7 +275,7 @@
               <rect class="ill-b2" x="92" y="50" width="48" height="100" rx="10"/><rect class="ill-cap" x="110" y="30" width="12" height="20"/><rect class="ill-cap" x="102" y="24" width="32" height="8" rx="3"/>
               <rect class="ill-b3" x="158" y="84" width="50" height="66" rx="8"/><rect class="ill-cap" x="172" y="70" width="22" height="14" rx="3"/></svg>
           <span>=</span>
-          <svg viewBox="0 0 24 32" class="pack__drop"><path class="ill-bar" d="M12 1.5C12 1.5 2 13.2 2 20.2a10 10 0 0 0 20 0C22 13.2 12 1.5 12 1.5Z"/></svg>
+          <svg viewBox="0 0 40 40" class="pack__drop"><rect class="ill-bar" x="3" y="3" width="34" height="34" rx="7"/></svg>
         </div>
         <div class="pack__copy">
           <h3>Pack with me: one tiny bar instead of three bottles.</h3>
@@ -268,7 +297,7 @@
         <a class="btn btn--light" href="#waitlist">Join the waitlist</a>
       </div>
       <div class="eco__photo photo">
-        <img src="https://images.unsplash.com/photo-1780599894862-de1f8f9bfa3d?auto=format&fit=crop&q=75&w=1200" alt="Green eucalyptus branches on a white background" width="1200" height="900" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1654652602865-53efa00c3e05?auto=format&fit=crop&q=75&w=1200" alt="Blue ocean, cliffs and mountains on the Malibu coast" width="1200" height="900" loading="lazy">
       </div>
     </section>
 
@@ -298,24 +327,32 @@
           </li>
         </ol>
         <div class="how__photo photo">
-          <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&q=75&w=1000" alt="A bar of soap resting on a wooden table" width="1000" height="1200" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1607006482749-f25db0b3fbab?auto=format&fit=crop&q=75&w=1000" alt="White square bars and a small dish in soft sunlight" width="1000" height="1200" loading="lazy">
         </div>
       </div>
     </section>
 
     <!-- Gallery -->
-    <section class="gallery" aria-label="Photos">
-      <div class="photo"><img src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&q=75&w=700" alt="Green leaves" width="700" height="700" loading="lazy"></div>
-      <div class="photo"><img src="https://images.unsplash.com/photo-1650189608237-db034f45e552?auto=format&fit=crop&q=75&w=700" alt="A bar of soap on a wooden dish" width="700" height="700" loading="lazy"></div>
-      <div class="photo"><img src="https://images.unsplash.com/photo-1596911647169-7085321c81b8?auto=format&fit=crop&q=75&w=700" alt="Long, dark hair seen from behind" width="700" height="700" loading="lazy"></div>
-      <div class="photo"><img src="https://images.unsplash.com/photo-1639690265149-d70d289a6638?auto=format&fit=crop&q=75&w=700" alt="Leaves resting on a white cloth" width="700" height="700" loading="lazy"></div>
+    <section class="section section--tight" aria-labelledby="out-title">
+      <div class="section__head">
+        <p class="eyebrow">Out there</p>
+        <h2 id="out-title" class="section__title">Beach days. Trail days. Good hair days.</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1654652602883-5e0acb726f67?auto=format&fit=crop&q=75&w=800" alt="Teal ocean and mountains along the California coast" width="800" height="800" loading="lazy"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1576082984785-e3c9656e57c5?auto=format&fit=crop&q=75&w=800" alt="Curly blonde hair flipping in front of a waterfall" width="800" height="800" loading="lazy"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1554816841-35f2c23dcf5f?auto=format&fit=crop&q=75&w=800" alt="Three friends walking on the beach, seen from behind" width="800" height="800" loading="lazy"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1596911647169-7085321c81b8?auto=format&fit=crop&q=75&w=800" alt="Long, dark wavy hair seen from behind" width="800" height="800" loading="lazy"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1619543532136-d2aa7cfb7104?auto=format&fit=crop&q=75&w=800" alt="Long wavy hair beside a waterfall" width="800" height="800" loading="lazy"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1644945581699-3cbed4b3fe8b?auto=format&fit=crop&q=75&w=800" alt="Friends laughing on the beach near a pier" width="800" height="800" loading="lazy"></div>
+      </div>
     </section>
 
     <!-- Founder story -->
     <section class="split split--flip" id="story" aria-labelledby="story-title">
       <!-- FOUNDER PHOTO: replace this image with Gavin's picture (save it as assets/gavin.jpg and change the src). -->
       <div class="split__photo photo">
-        <img src="https://images.unsplash.com/photo-1780599895004-0112e637e243?auto=format&fit=crop&q=75&w=1200" alt="A eucalyptus branch" width="1200" height="1400" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1639690265149-d70d289a6638?auto=format&fit=crop&q=75&w=1200" alt="Eucalyptus leaves resting on a white cloth" width="1200" height="1400" loading="lazy">
       </div>
       <div class="split__copy">
         <p class="eyebrow">Our story</p>
@@ -486,7 +523,7 @@
       <span class="brand__word">drop</span>
     </a>
     <p class="footer__line">Clean hair. Cleaner planet. No bottle required.</p>
-    <p class="footer__fine">© 2026 Drop. Photos and drawings are for illustration only. Real Drop product photos are coming soon.</p>
+    <p class="footer__fine">© 2026 Drop. Photos are stock images for illustration. The people shown are models, not Drop customers. Real Drop product photos are coming soon.</p>
   </footer>
 
   <script src="main.js" defer></script>
