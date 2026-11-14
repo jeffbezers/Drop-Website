@@ -53,6 +53,7 @@ The brand promise is that switching feels easy, cool and actually better, withou
 
 - Name: **Drop**. It carries three meanings: drop the bottle, a drop of water, and a product drop.
 - The bar is shaped like a water drop, so the product is the logo. A drop-shaped bar in a dish, shot from above, is the core brand image.
+- Public wording: lead with "eco-friendly shampoo bar" and "no plastic bottle". Keep it plain; never use the word "syndet" on the site (say "real shampoo, made into a bar").
 - Voice: confident, transparent, useful, a little playful. Never preachy, guilt-driven or "eco but worse."
 - Approved lines:
   - "Your shower, minus the plastic." (homepage hero)

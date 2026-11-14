@@ -1,138 +1,11 @@
-/* Drop — homepage behaviour: depth gauge, signup forms, "Would you switch?" quiz. */
+/* Drop — homepage behaviour: signup forms and the "Would you switch?" quiz. */
 
 /*
  * FORM SETUP
- * Signups aren't connected to anything yet. To start collecting them:
- *   1. Make a free form at https://formspree.io (or a similar service).
- *   2. Paste its endpoint URL below, e.g. "https://formspree.io/f/abcdwxyz".
- * Both forms send to the same endpoint, with a "form" field saying which one it was.
+ * Signups are sent to this Formspree form. To use a different one, replace the URL below.
+ * Both forms send to the same place, with a "form" field saying which one it was.
  */
 const FORM_ENDPOINT = "https://formspree.io/f/xzeelzwr";
-
-/* ---------------------------------------------------------------- gauge */
-(() => {
-  const gauge = document.querySelector(".gauge");
-  const readout = gauge?.querySelector("[data-depth]");
-  const rail = gauge?.querySelector("[data-rail]");
-  const stopsList = gauge?.querySelector("[data-stops]");
-  const menu = gauge?.querySelector("[data-menu]");
-  const menuBtn = gauge?.querySelector(".gauge__readout");
-  // Every depth band with an id is a place you can jump to.
-  const bands = [...document.querySelectorAll("main [data-depth-value][id]")];
-  if (!gauge || !readout || !bands.length) return;
-
-  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const maxScroll = () => Math.max(0, document.documentElement.scrollHeight - innerHeight);
-  const nameOf = (band) => document.getElementById(band.getAttribute("aria-labelledby"))?.textContent.trim() || "";
-  const go = (y, smooth = true) =>
-    scrollTo({ top: Math.min(maxScroll(), Math.max(0, y)), behavior: smooth && !reduceMotion ? "smooth" : "instant" });
-
-  // Build the stops: one link per band, on the rail (desktop) and in the menu (phone).
-  const railLinks = [], menuLinks = [];
-  for (const band of bands) {
-    const depth = band.dataset.depthValue, name = nameOf(band);
-    const li = document.createElement("li");
-    li.className = "gauge__stop";
-    li.innerHTML = `<a href="#${band.id}"><span class="gauge__name"></span>${depth}</a>`;
-    li.querySelector(".gauge__name").textContent = name;
-    li.querySelector("a").setAttribute("aria-label", `${depth} metres: ${name}`);
-    stopsList.append(li);
-    railLinks.push(li);
-
-    const mi = document.createElement("li");
-    mi.innerHTML = `<a href="#${band.id}"><b>${depth} m</b><span></span></a>`;
-    mi.querySelector("span").textContent = name;
-    menu.append(mi);
-    menuLinks.push(mi.querySelector("a"));
-  }
-
-  // Place each stop where the page sits when that band reaches the top of the screen.
-  const layoutStops = () => {
-    const max = maxScroll();
-    bands.forEach((band, i) => {
-      const at = max ? Math.min(1, band.offsetTop / max) : 0;
-      railLinks[i].style.setProperty("--at", at.toFixed(4));
-    });
-  };
-
-  let currentIndex = 0, ticking = false;
-  const update = () => {
-    ticking = false;
-    const max = maxScroll();
-    const p = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
-    gauge.style.setProperty("--p", p.toFixed(4));
-
-    // Current band = last band whose top has passed 40% of the viewport.
-    const line = innerHeight * 0.4;
-    let idx = 0;
-    bands.forEach((b, i) => { if (b.getBoundingClientRect().top <= line) idx = i; });
-    if (scrollY >= max - 2) idx = bands.length - 1;
-    currentIndex = idx;
-    const depth = bands[idx].dataset.depthValue;
-    if (readout.textContent !== depth) readout.textContent = depth;
-    gauge.classList.toggle("is-deep", parseFloat(depth) >= 2);
-    rail.setAttribute("aria-valuenow", depth);
-    rail.setAttribute("aria-valuetext", `${depth} metres: ${nameOf(bands[idx])}`);
-    [...railLinks.map((li) => li.querySelector("a")), ...menuLinks].forEach((a) =>
-      a.setAttribute("aria-current", a.getAttribute("href") === `#${bands[idx].id}` ? "true" : "false"));
-  };
-  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
-  addEventListener("scroll", onScroll, { passive: true });
-  addEventListener("resize", () => { layoutStops(); onScroll(); });
-  new ResizeObserver(() => { layoutStops(); onScroll(); }).observe(document.body);
-  layoutStops();
-  update();
-
-  // Drag the marker (or press anywhere on the rail) to move through the page.
-  const fracAt = (clientY) => {
-    const r = rail.getBoundingClientRect();
-    return Math.min(1, Math.max(0, (clientY - r.top) / r.height));
-  };
-  let dragging = false, moved = false;
-  rail.addEventListener("pointerdown", (e) => {
-    if (e.button !== 0) return;
-    dragging = true; moved = false;
-    rail.setPointerCapture(e.pointerId);
-    gauge.classList.add("is-dragging");
-    e.preventDefault();
-  });
-  rail.addEventListener("pointermove", (e) => {
-    if (!dragging) return;
-    moved = true;
-    go(fracAt(e.clientY) * maxScroll(), false);
-  });
-  const endDrag = (e) => {
-    if (!dragging) return;
-    dragging = false;
-    gauge.classList.remove("is-dragging");
-    if (!moved) go(fracAt(e.clientY) * maxScroll()); // a plain click glides there
-  };
-  rail.addEventListener("pointerup", endDrag);
-  rail.addEventListener("pointercancel", endDrag);
-
-  // Keyboard: arrows step between depths, Home/End jump to the surface or the floor.
-  rail.addEventListener("keydown", (e) => {
-    const to = { ArrowDown: currentIndex + 1, ArrowRight: currentIndex + 1, ArrowUp: currentIndex - 1, ArrowLeft: currentIndex - 1, Home: 0, End: bands.length - 1 }[e.key];
-    if (to === undefined) return;
-    e.preventDefault();
-    const band = bands[Math.min(bands.length - 1, Math.max(0, to))];
-    go(band.offsetTop);
-  });
-
-  // Phone menu
-  const closeMenu = () => { menu.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); };
-  const desktop = matchMedia("(min-width: 1180px)");
-  menuBtn.addEventListener("click", () => {
-    if (desktop.matches) return; // the rail does this job on wide screens
-    const open = menu.hidden;
-    menu.hidden = !open;
-    menuBtn.setAttribute("aria-expanded", String(open));
-    if (open) (menu.querySelector('[aria-current="true"]') || menuLinks[0]).focus();
-  });
-  menu.addEventListener("click", (e) => { if (e.target.closest("a")) closeMenu(); });
-  document.addEventListener("click", (e) => { if (!menu.hidden && !gauge.contains(e.target)) closeMenu(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { closeMenu(); menuBtn.focus(); } });
-})();
 
 /* ---------------------------------------------------------------- forms */
 const quizAnswers = {};
@@ -222,10 +95,10 @@ for (const form of document.querySelectorAll("[data-form]")) {
   const hairSelect = document.querySelector('[data-form="beta"] select[name="hair"]');
 
   const verdicts = {
-    results: ["You’d switch for results.", "Same here. That’s the whole point of Drop: a bar that holds its own against your liquid shampoo. Test it and tell us if it does."],
-    plastic: ["You’re ready to drop the bottle.", "One bar replaces bottles you’d otherwise toss. Help us make sure it’s a bar you’ll actually keep using."],
-    travel: ["You’d switch for the carry-on.", "Small, solid, and nothing to leak in your bag. Test it on your next trip."],
-    ingredients: ["You want to know what’s inside.", "We’ll publish the full ingredient list before launch, with a plain-English line for each one. Testers see it first."],
+    results: ["You’d switch for better hair.", "Same here. That’s the whole point of Drop: a bar that works as well as the shampoo you use now. Try it and tell us if it does."],
+    plastic: ["You’re ready to drop the bottle.", "Every bar is one less plastic bottle. Help us make sure it’s a bar you’ll want to keep using."],
+    travel: ["You’d switch for easier travel.", "Small, solid, and nothing to spill in your bag. Try it on your next trip."],
+    ingredients: ["You want to know what’s inside.", "We’ll post the full ingredient list before launch, with a simple explanation of each one. Testers see it first."],
   };
 
   const show = (i) => {
@@ -247,7 +120,7 @@ for (const form of document.querySelectorAll("[data-form]")) {
       const [title, body] = verdicts[quizAnswers.priority] || verdicts.results;
       result.querySelector("[data-verdict]").textContent = title;
       const curlNote = ["curly", "coily"].includes(quizAnswers.hair)
-        ? " Our launch bars are made for normal hair. Testers with your hair type help decide what we make next."
+        ? " Our first bars are made for normal hair. Testers with your hair type help us decide what to make next."
         : "";
       result.querySelector("[data-verdict-body]").textContent = body + curlNote;
       if (hairSelect && quizAnswers.hair) hairSelect.value = quizAnswers.hair;
