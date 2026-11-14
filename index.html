@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap">
   <link rel="preload" href="fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -59,11 +59,7 @@
         </form>
         <a class="textlink" href="#quiz">Would you switch? Take the 30-second quiz</a>
       </div>
-      <div class="hero__collage">
-        <div class="photo hero__main"><img src="https://images.unsplash.com/photo-1611083517823-b432dc3b7320?auto=format&fit=crop&q=75&w=1400" alt="Four friends walking together along a sunny beach" width="1400" height="933" fetchpriority="high"></div>
-        <div class="photo"><img src="https://images.unsplash.com/photo-1644945583242-1f7fdb6087ea?auto=format&fit=crop&q=75&w=800" alt="Two friends with long curly hair laughing on the sand near a pier" width="800" height="800" ></div>
-        <div class="photo"><img src="https://images.unsplash.com/photo-1624680511607-bc9387d2e906?auto=format&fit=crop&q=75&w=800" alt="Santa Monica Pier and the beach seen from above" width="800" height="800" ></div>
-      </div>
+      <div class="hero__photo photo"><img src="assets/hero-wet-curls.jpg" alt="A smiling woman flinging her wet, curly hair" width="596" height="398" fetchpriority="high"></div>
     </section>
 
     <!-- The four things Drop has to do -->
@@ -101,12 +97,12 @@
       </div>
       <div class="swap">
         <figure class="swap__card">
-          <div class="photo"><img src="https://images.unsplash.com/photo-1539702232509-87c46098acf1?auto=format&fit=crop&q=75&w=900" alt="A pile of empty white plastic bottles" width="900" height="675" loading="lazy"></div>
-          <figcaption><strong>Before</strong> Plastic bottle after plastic bottle.</figcaption>
+          <div class="photo"><img src="assets/before-bottles.jpg" alt="Plastic bottles lined up on a tray across a bathtub" width="862" height="544" loading="lazy"></div>
+          <figcaption><strong>Before</strong> A row of plastic bottles.</figcaption>
         </figure>
         <span class="swap__arrow" aria-hidden="true">→</span>
         <figure class="swap__card swap__card--after">
-          <div class="photo"><img src="https://images.unsplash.com/photo-1607006555271-0939bf0333eb?auto=format&fit=crop&q=75&w=900" alt="One white square bar resting on a small dish" width="900" height="675" loading="lazy"></div>
+          <div class="photo"><img src="assets/after-bar-on-bag.jpg" alt="One oatmeal-colored bar resting on a mesh soap saver bag" width="680" height="542" loading="lazy"></div>
           <figcaption><strong>After</strong> One bar. That's it.</figcaption>
         </figure>
       </div>
@@ -115,7 +111,7 @@
     <!-- The difference -->
     <section class="split" id="difference" aria-labelledby="difference-title">
       <div class="split__photo photo">
-        <img src="https://images.unsplash.com/photo-1660125741150-777623997e63?auto=format&fit=crop&q=75&w=1200" alt="A woman on the beach seen from behind, her hair blowing in the wind" width="1200" height="1400" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1602549179763-ce6c9df961b7?auto=format&fit=crop&q=75&w=1200" alt="Long brown hair moving in a light breeze" width="1200" height="1400" loading="lazy">
       </div>
       <div class="split__copy">
         <p class="eyebrow">The Drop difference</p>
@@ -127,7 +123,7 @@
           <li><s>Hard to use</s><p>Wet it, rub it on, rinse. That's all there is to it.</p></li>
           <li><s>Too earthy</s><p>Modern, clean, and good-looking. Nothing rustic about it.</p></li>
           <li><s>Not good for real hair</s><p>Made to perform like the shampoo and conditioner you use now.</p></li>
-          <li><s>Inconvenient to store</s><p>It lives in a mesh bag that hangs up and lets the bar dry.</p></li>
+          <li><s>Inconvenient to store</s><p>It lives in a soap saver bag that hangs up and lets the bar dry.</p></li>
         </ul>
         <p class="pull">We fixed the experience. This is modern solid haircare that feels good, looks good, and helps reduce plastic waste.</p>
       </div>
@@ -163,8 +159,6 @@
             <dd>Silicones coat hair to make it feel smooth, and they can build up over time. We skip them.</dd>
             <dt>Vegan and cruelty-free</dt>
             <dd>No animal ingredients and no animal testing.</dd>
-            <dt>No added color</dt>
-            <dd>We don't add dyes, so the bars are naturally white, pale yellow, or clear.</dd>
             <dt>Plastic-free</dt>
             <dd>No bottle, pump, or cap. The bar comes in a paper box.</dd>
           </dl>
@@ -178,17 +172,18 @@
       <div class="section__head">
         <p class="eyebrow">Straight from nature</p>
         <h2 id="scents-title" class="section__title">The scents we're exploring</h2>
-        <p class="section__lede">Fresh, clean, and nothing fake-smelling. These are the six we've tried so far. Tell us your favorite when you join the waitlist.</p>
+        <p class="section__lede">Fresh, clean, and nothing fake-smelling. These are the seven we're trying. Tell us your favorite when you join the waitlist.</p>
       </div>
-      <ul class="scents">
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1650964336695-448cc983e700?auto=format&fit=crop&q=75&w=600" alt="A sprig of fresh rosemary on a white surface" width="600" height="600" loading="lazy"></div><span>Rosemary</span></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1780599894862-de1f8f9bfa3d?auto=format&fit=crop&q=75&w=600" alt="Green eucalyptus branches" width="600" height="600" loading="lazy"></div><span>Eucalyptus</span></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1560769680-ba2f3767c785?auto=format&fit=crop&q=75&w=600" alt="Fresh coconut halves" width="600" height="600" loading="lazy"></div><span>Coconut</span></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1625934036482-2dccff707564?auto=format&fit=crop&q=75&w=600" alt="Stems of lavender" width="600" height="600" loading="lazy"></div><span>Lavender</span></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1777428904800-526ba92be805?auto=format&fit=crop&q=75&w=600" alt="Fine green tea tree leaves" width="600" height="600" loading="lazy"></div><span>Tea tree</span></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1589881132856-bd1a4af0ce4d?auto=format&fit=crop&q=75&w=600" alt="Halved lemons and limes" width="600" height="600" loading="lazy"></div><span>Citrus</span></li>
+      <div class="scents-photo photo"><img src="assets/scents-soaps.jpg" alt="A row of handmade bars surrounded by cinnamon, lavender, cotton, eucalyptus and other natural ingredients" width="1358" height="420" loading="lazy"></div>
+      <ul class="chips chips--scents">
+        <li>Cinnamon</li>
+        <li>Nutmeg</li>
+        <li>Lavender</li>
+        <li>Eucalyptus</li>
+        <li>Cotton</li>
+        <li>Dandelion</li>
+        <li>Vanilla bean</li>
       </ul>
-      <p class="scents__note">Citrus means lemon and lime.</p>
     </section>
 
     <!-- Lineup -->
@@ -202,44 +197,29 @@
       <div class="products">
         <article class="product">
           <div class="product__photo photo">
-            <img src="https://images.unsplash.com/photo-1618840152526-92682643af2d?auto=format&fit=crop&q=75&w=900" alt="Two white square bars beside green leaves" width="900" height="900" loading="lazy">
+            <img src="assets/bars-stack-of-four.jpg" alt="A stack of four bars in different natural colors with a sprig of eucalyptus" width="582" height="454" loading="lazy">
             <span class="tag">Coming soon</span>
           </div>
-          <h3 class="product__name">Everyday Shampoo Bar</h3>
-          <p class="product__desc">A square, fresh-smelling bar that lathers fast and rinses out clean. Made for normal hair.</p>
+          <h3 class="product__name">Shampoo &amp; Conditioner Bars</h3>
+          <p class="product__desc">The shampoo bar lathers fast and rinses out clean. The conditioner bar smooths out tangles and leaves hair soft. Made for normal hair.</p>
           <a class="textlink" href="#waitlist">Tell me when it's ready</a>
         </article>
         <article class="product">
           <div class="product__photo photo">
-            <img src="https://images.unsplash.com/photo-1607006483224-73ce0729e22a?auto=format&fit=crop&q=75&w=900" alt="Three white square bars in soft sunlight" width="900" height="900" loading="lazy">
-            <span class="tag">Coming soon</span>
-          </div>
-          <h3 class="product__name">Moisture Conditioner Bar</h3>
-          <p class="product__desc">Smooths out tangles and leaves hair soft, without making it feel heavy.</p>
-          <a class="textlink" href="#waitlist">Tell me when it's ready</a>
-        </article>
-        <article class="product">
-          <div class="product__photo photo">
-            <svg class="mesh" viewBox="0 0 300 300" role="img" aria-label="Drawing of two mesh bags hanging in a shower, one holding a white shampoo bar and one holding a pale yellow conditioner bar">
-              <defs><pattern id="meshp" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H9M0 0V9" class="mesh__net"/></pattern></defs>
-              <rect x="20" y="34" width="260" height="8" rx="4" class="mesh__rail"/>
-              <g>
-                <path d="M72 96 92 46 112 96" class="mesh__string"/><circle cx="92" cy="44" r="6" class="mesh__hook"/>
-                <rect x="62" y="132" width="60" height="60" rx="7" class="mesh__bar mesh__bar--white" transform="rotate(-6 92 162)"/>
-                <path d="M48 96h88l8 104a22 22 0 0 1-22 24H62a22 22 0 0 1-22-24Z" fill="url(#meshp)" class="mesh__bag"/>
-                <text x="92" y="262" text-anchor="middle" class="mesh__label">Shampoo</text>
-              </g>
-              <g>
-                <path d="M188 96 208 46 228 96" class="mesh__string"/><circle cx="208" cy="44" r="6" class="mesh__hook"/>
-                <rect x="178" y="132" width="60" height="60" rx="7" class="mesh__bar mesh__bar--yellow" transform="rotate(5 208 162)"/>
-                <path d="M164 96h88l8 104a22 22 0 0 1-22 24h-60a22 22 0 0 1-22-24Z" fill="url(#meshp)" class="mesh__bag"/>
-                <text x="208" y="262" text-anchor="middle" class="mesh__label">Conditioner</text>
-              </g>
-            </svg>
+            <img src="assets/kit-stack-on-bag.jpg" alt="Three bars stacked on a mesh soap saver bag" width="652" height="454" loading="lazy">
             <span class="tag tag--accent">Perfect for college</span>
           </div>
           <h3 class="product__name">The Starter Kit</h3>
-          <p class="product__desc">A shampoo bar, a conditioner bar, and two mesh bags to hang them in your shower, one for each bar. The bags drain, dry fast, and travel in your bag.</p>
+          <p class="product__desc">A shampoo bar, a conditioner bar, and two soap saver bags to hang them in your shower. Everything you need to make the switch.</p>
+          <a class="textlink" href="#waitlist">Tell me when it's ready</a>
+        </article>
+        <article class="product">
+          <div class="product__photo photo">
+            <img src="assets/soap-saver-bag.jpg" alt="A woven mesh soap saver bag with a drawstring and wooden bead" width="394" height="458" loading="lazy">
+            <span class="tag">Coming soon</span>
+          </div>
+          <h3 class="product__name">Soap Saver Bag</h3>
+          <p class="product__desc">A mesh bag that holds your bar and hangs in the shower. It drains, helps the bar dry between washes, and travels in your bag.</p>
           <a class="textlink" href="#waitlist">Tell me when it's ready</a>
         </article>
       </div>
@@ -263,9 +243,9 @@
       <ul class="people">
         <li><div class="photo"><img src="https://images.unsplash.com/photo-1767206105936-468e76a69fe4?auto=format&fit=crop&q=75&w=800" alt="Three friends with long hair at the beach at sunset" width="800" height="600" loading="lazy"></div><h3>Teens</h3><p>An easy first step into a low-waste routine.</p></li>
         <li><div class="photo"><img src="https://images.unsplash.com/photo-1758613171187-9a41d0fc93ab?auto=format&fit=crop&q=75&w=800" alt="Four friends laughing together in a park" width="800" height="600" loading="lazy"></div><h3>College students</h3><p>Fits in a shower caddy and holds up in a shared bathroom.</p></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?auto=format&fit=crop&q=75&w=800" alt="Three young adults talking outside" width="800" height="600" loading="lazy"></div><h3>Young professionals</h3><p>Good hair on a busy morning, and a tidier shower.</p></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&q=75&w=800" alt="Four friends sitting on a green mountainside after a hike" width="800" height="600" loading="lazy"></div><h3>Athletes</h3><p>Toss it in your gym bag. There's nothing to leak.</p></li>
-        <li><div class="photo"><img src="https://images.unsplash.com/photo-1534396708547-d8e912eb38ba?auto=format&fit=crop&q=75&w=800" alt="Three hikers looking out over a mountain lake" width="800" height="600" loading="lazy"></div><h3>Travelers</h3><p>It's solid, so it goes straight in your carry-on.</p></li>
+        <li><div class="photo"><img src="assets/professionals.jpg" alt="Four coworkers laughing as they walk down a hallway" width="864" height="558" loading="lazy"></div><h3>Professionals</h3><p>Good hair on a busy morning, and a tidier shower.</p></li>
+        <li><div class="photo"><img src="assets/athlete-climber.jpg" alt="A rock climber reaching up a cliff face" width="730" height="472" loading="lazy"></div><h3>Athletes</h3><p>Toss it in your gym bag. There's nothing to leak.</p></li>
+        <li><div class="photo"><img src="assets/travelers-peak.jpg" alt="Two hikers on a rocky peak looking out at snowy mountains" width="547" height="365" loading="lazy"></div><h3>Travelers</h3><p>It's solid, so it goes straight in your carry-on.</p></li>
         <li><div class="photo"><img src="https://images.unsplash.com/photo-1596510915124-38eaa5517966?auto=format&fit=crop&q=75&w=800" alt="A family with a small child walking on the beach" width="800" height="600" loading="lazy"></div><h3>Eco-conscious families</h3><p>One bar in the shower in place of a row of bottles.</p></li>
       </ul>
 
@@ -285,7 +265,7 @@
     </section>
 
     <!-- Environmental benefit -->
-    <section class="eco" aria-labelledby="eco-title">
+    <section class="eco eco--solo" aria-labelledby="eco-title">
       <div class="eco__copy">
         <p class="eyebrow eyebrow--light">The planet part</p>
         <h2 id="eco-title" class="section__title">High-performance haircare. Low-waste by design.</h2>
@@ -295,9 +275,6 @@
           <li><strong>No water to ship.</strong> A bar is small and light, so it takes less space to move around.</li>
         </ul>
         <a class="btn btn--light" href="#waitlist">Join the waitlist</a>
-      </div>
-      <div class="eco__photo photo">
-        <img src="https://images.unsplash.com/photo-1654652602865-53efa00c3e05?auto=format&fit=crop&q=75&w=1200" alt="Blue ocean, cliffs and mountains on the Malibu coast" width="1200" height="900" loading="lazy">
       </div>
     </section>
 
@@ -323,11 +300,12 @@
           </li>
           <li class="step">
             <span class="step__n" aria-hidden="true">4</span>
-            <div><h3 class="step__title">Hang it up</h3><p>Put the bars back in the mesh bag and hang it away from the water, so they dry and stay firm.</p></div>
+            <div><h3 class="step__title">Hang it up</h3><p>Put each bar back in its soap saver bag and hang it away from the water, so they dry and stay firm.</p></div>
           </li>
         </ol>
-        <div class="how__photo photo">
-          <img src="https://images.unsplash.com/photo-1607006482749-f25db0b3fbab?auto=format&fit=crop&q=75&w=1000" alt="White square bars and a small dish in soft sunlight" width="1000" height="1200" loading="lazy">
+        <div class="how__photos">
+          <div class="photo"><img src="assets/lather-woman.jpg" alt="A woman lathering shampoo into her hair, seen from behind" width="340" height="524" loading="lazy"></div>
+          <div class="photo"><img src="assets/lather-man.jpg" alt="A smiling man lathering shampoo into his hair" width="666" height="448" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -339,27 +317,23 @@
         <h2 id="out-title" class="section__title">Beach days. Trail days. Good hair days.</h2>
       </div>
       <div class="gallery">
-        <div class="photo"><img src="https://images.unsplash.com/photo-1654652602883-5e0acb726f67?auto=format&fit=crop&q=75&w=800" alt="Teal ocean and mountains along the California coast" width="800" height="800" loading="lazy"></div>
-        <div class="photo"><img src="https://images.unsplash.com/photo-1576082984785-e3c9656e57c5?auto=format&fit=crop&q=75&w=800" alt="Curly blonde hair flipping in front of a waterfall" width="800" height="800" loading="lazy"></div>
-        <div class="photo"><img src="https://images.unsplash.com/photo-1554816841-35f2c23dcf5f?auto=format&fit=crop&q=75&w=800" alt="Three friends walking on the beach, seen from behind" width="800" height="800" loading="lazy"></div>
-        <div class="photo"><img src="https://images.unsplash.com/photo-1596911647169-7085321c81b8?auto=format&fit=crop&q=75&w=800" alt="Long, dark wavy hair seen from behind" width="800" height="800" loading="lazy"></div>
-        <div class="photo"><img src="https://images.unsplash.com/photo-1619543532136-d2aa7cfb7104?auto=format&fit=crop&q=75&w=800" alt="Long wavy hair beside a waterfall" width="800" height="800" loading="lazy"></div>
-        <div class="photo"><img src="https://images.unsplash.com/photo-1644945581699-3cbed4b3fe8b?auto=format&fit=crop&q=75&w=800" alt="Friends laughing on the beach near a pier" width="800" height="800" loading="lazy"></div>
+        <div class="photo"><img src="assets/beach-smile.jpg" alt="A smiling woman on the beach running a hand through her long dark hair" width="656" height="448" loading="lazy"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1534396708547-d8e912eb38ba?auto=format&fit=crop&q=75&w=800" alt="Three hikers looking out over a mountain lake" width="800" height="600" loading="lazy"></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1644945581699-3cbed4b3fe8b?auto=format&fit=crop&q=75&w=800" alt="Friends laughing on the beach near a pier" width="800" height="600" loading="lazy"></div>
       </div>
     </section>
 
     <!-- Founder story -->
     <section class="split split--flip" id="story" aria-labelledby="story-title">
-      <!-- FOUNDER PHOTO: replace this image with Gavin's picture (save it as assets/gavin.jpg and change the src). -->
       <div class="split__photo photo">
-        <img src="https://images.unsplash.com/photo-1639690265149-d70d289a6638?auto=format&fit=crop&q=75&w=1200" alt="Eucalyptus leaves resting on a white cloth" width="1200" height="1400" loading="lazy">
+        <img src="assets/gavin.jpg" alt="Gavin Zuniga, founder of Drop, at the beach" width="1400" height="1484" loading="lazy">
       </div>
       <div class="split__copy">
         <p class="eyebrow">Our story</p>
         <h2 id="story-title" class="section__title">Why I started Drop</h2>
         <blockquote class="story">
           <p>I discovered shampoo and conditioner bars and realized that one simple shower switch could change the way people think about everyday waste. But many bar products felt too rustic, too drying, or too niche.</p>
-          <p>I wanted to create plastic-free haircare that felt modern, clean, beautiful, and genuinely effective — something people would actually want to keep using.</p>
+          <p>I wanted to create plastic-free haircare that felt modern, clean, beautiful, and genuinely effective, something people would actually want to keep using.</p>
         </blockquote>
         <p class="sig">Gavin Zuniga, founder of Drop</p>
       </div>
@@ -422,6 +396,7 @@
           <p class="eyebrow">Be a tester</p>
           <h2 id="beta-title" class="section__title">Try Drop before anyone else</h2>
           <p class="section__lede">We're looking for our first testers. You get free sample bars. We get your honest opinion on how they lather, how they smell, and how your hair feels after a week.</p>
+          <div class="beta__photo photo"><img src="assets/tester-wet-hair.jpg" alt="A smiling woman with wet hair falling across her face" width="600" height="584" loading="lazy"></div>
         </div>
 
         <form class="beta" data-form="beta" novalidate>
@@ -481,20 +456,12 @@
           <p>Plant-derived cleansing agents, with no sulfates and no silicones. It's vegan and cruelty-free. We'll post the full ingredient list, and what each ingredient does, before launch.</p>
         </details>
         <details>
-          <summary>How long does a bar last?</summary>
-          <p>Our testers are finding that out right now. We'll share real numbers here before launch.</p>
-        </details>
-        <details>
           <summary>Will it work on curly or coily hair?</summary>
           <p>Our first bars are made for normal hair. Tell us your hair type when you sign up, because it helps us decide what to make next.</p>
         </details>
         <details>
-          <summary>Is it safe for color-treated hair?</summary>
-          <p>We haven't tested that yet, so we won't promise it. When we have, we'll say so here.</p>
-        </details>
-        <details>
           <summary>How do I keep the bar from getting mushy?</summary>
-          <p>Keep it out of standing water. The mesh bag in the Starter Kit hangs up and lets water drain away, so the bar dries between showers.</p>
+          <p>Keep it out of standing water. The soap saver bag hangs up and lets water drain away, so the bar dries between showers.</p>
         </details>
         <details>
           <summary>When can I buy it?</summary>
@@ -523,9 +490,9 @@
       <span class="brand__word">drop</span>
     </a>
     <p class="footer__line">Clean hair. Cleaner planet. No bottle required.</p>
-    <p class="footer__fine">© 2026 Drop. Photos are stock images for illustration. The people shown are models, not Drop customers. Real Drop product photos are coming soon.</p>
+    <p class="footer__fine">© 2026 Drop. Photos are stock images for illustration. Apart from our founder, the people shown are models, not Drop customers. Real Drop product photos are coming soon.</p>
   </footer>
 
-  <script src="main.js?v=4" defer></script>
+  <script src="main.js?v=5" defer></script>
 </body>
 </html>

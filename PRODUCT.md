@@ -52,9 +52,10 @@ The brand promise is that switching feels easy, cool and actually better, withou
 ## Brand Commitments
 
 - Name: **Drop**. It carries three meanings: drop the bottle, a drop of water, and a product drop.
-- The bars are square. They are white, pale yellow, or clear, because no color is added. Each kit comes with two mesh bags (one for shampoo, one for conditioner) that hang in the shower.
-- Scents explored so far: rosemary, eucalyptus, coconut, lavender, tea tree, citrus (lemon and lime).
-- Photo direction: Gen Z friends at the beach and on hikes with their hair visible, Southern California coast, young professionals, eco-conscious families, natural ingredients. No animals. No serious sports shots.
+- Bars come in natural colors (cream, tan, oatmeal, speckled). Each bar hangs in its own mesh soap saver bag.
+- Lineup: Shampoo & Conditioner Bars, the Starter Kit (both bars plus two soap saver bags), and the Soap Saver Bag on its own.
+- Scents being explored: cinnamon, nutmeg, lavender, eucalyptus, cotton, dandelion, vanilla bean.
+- Photos: keep it to a few chosen pictures so the product stays the focus. One photo in the hero. Photo files supplied by Gavin live in `assets/`; confirm each stock photo is licensed and replace the small copies with full-size downloads.
 - Public wording: lead with "eco-friendly shampoo bar" and "no plastic bottle". Keep it plain; never use the word "syndet" on the site (say "real shampoo, made into a bar").
 - Voice: confident, transparent, useful, a little playful. Never preachy, guilt-driven or "eco but worse."
 - Approved lines:
