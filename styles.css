@@ -428,3 +428,16 @@ details p { padding: 0 0 22px; color: var(--ink-soft); max-width: 62ch; }
 .people .photo img[src$="athlete-climber.jpg"] { object-position: 80% 50%; }
 .how__photos .photo:first-child { aspect-ratio: 1; }
 .how__photos .photo:first-child img { object-position: 50% 15%; }
+
+/* ============================================================ holding page while photos are updated */
+.pause {
+  min-height: 100vh; min-height: 100dvh;
+  display: grid; align-content: center; justify-items: center; gap: 20px; text-align: center;
+  padding: 48px var(--gutter);
+}
+.pause .brand { margin-bottom: 12px; }
+.pause .brand__mark { width: 26px; height: 34px; }
+.pause .brand__word { font-size: 2.5rem; }
+.pause__title { font-size: clamp(2.2rem, 5.5vw, 3.6rem); max-width: 18ch; }
+.pause__lede { color: var(--ink-soft); font-size: 1.125rem; max-width: 46ch; }
+.pause__title span { display: block; }
